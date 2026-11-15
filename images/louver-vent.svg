@@ -1,4 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="800" height="550">
+<style>
+  .airflow{animation:flow 1.6s ease-in infinite}
+  @keyframes flow{
+    0%{transform:translateX(-30px);opacity:0}
+    25%{opacity:.9}
+    100%{transform:translateX(40px);opacity:0}
+  }
+  @media (prefers-reduced-motion: reduce){.airflow{animation:none}}
+</style>
 <defs>
   <linearGradient id="rib" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#152a5c"/><stop offset=".35" stop-color="#4f7fd8"/><stop offset=".6" stop-color="#244fb0"/><stop offset="1" stop-color="#152a5c"/></linearGradient>
   <pattern id="wall" width="46" height="10" patternUnits="userSpaceOnUse"><rect width="46" height="10" fill="url(#rib)"/></pattern>
@@ -23,7 +32,7 @@
 </g>
 <g fill="#5a6068"><circle cx="234" cy="152" r="4"/><circle cx="566" cy="152" r="4"/><circle cx="234" cy="374" r="4"/><circle cx="566" cy="374" r="4"/></g>
 <!-- airflow -->
-<g fill="none" stroke="#ff8a3a" stroke-width="4" stroke-linecap="round" opacity=".85">
+<g class="airflow" fill="none" stroke="#ff8a3a" stroke-width="4" stroke-linecap="round" opacity=".85">
   <path d="M600 200 C650 190 680 210 730 200"/><path d="M720 192 L732 200 L720 208"/>
   <path d="M600 262 C650 252 680 272 730 262"/><path d="M720 254 L732 262 L720 270"/>
   <path d="M600 324 C650 314 680 334 730 324"/><path d="M720 316 L732 324 L720 332"/>
