@@ -1,4 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="800" height="550">
+<style>
+  .blades{transform-box:view-box;transform-origin:400px 260px;animation:fan-spin 1.6s linear infinite}
+  @keyframes fan-spin{to{transform:rotate(360deg)}}
+  @media (prefers-reduced-motion: reduce){.blades{animation:none}}
+</style>
 <defs>
   <linearGradient id="rib" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#152a5c"/><stop offset=".35" stop-color="#4f7fd8"/><stop offset=".6" stop-color="#244fb0"/><stop offset="1" stop-color="#152a5c"/></linearGradient>
   <pattern id="wall" width="46" height="10" patternUnits="userSpaceOnUse"><rect width="46" height="10" fill="url(#rib)"/></pattern>
@@ -15,9 +20,11 @@
 <rect x="250" y="110" width="300" height="300" rx="14" fill="url(#frame)"/>
 <circle cx="400" cy="260" r="132" fill="#5a6068"/>
 <circle cx="400" cy="260" r="124" fill="url(#hole)"/>
-<!-- blades -->
-<g transform="translate(400 260) rotate(15)">
-  <use href="#b"/><use href="#b" transform="rotate(72)"/><use href="#b" transform="rotate(144)"/><use href="#b" transform="rotate(216)"/><use href="#b" transform="rotate(288)"/>
+<!-- blades (spin around the hub at 400,260) -->
+<g class="blades">
+  <g transform="translate(400 260) rotate(15)">
+    <use href="#b"/><use href="#b" transform="rotate(72)"/><use href="#b" transform="rotate(144)"/><use href="#b" transform="rotate(216)"/><use href="#b" transform="rotate(288)"/>
+  </g>
 </g>
 <circle cx="400" cy="260" r="30" fill="#2b2f35" stroke="#8b939c" stroke-width="4"/>
 <circle cx="400" cy="260" r="10" fill="#8b939c"/>

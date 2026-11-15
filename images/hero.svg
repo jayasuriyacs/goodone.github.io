@@ -1,4 +1,9 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<style>
+  .vanes{animation:turbo-spin .7s linear infinite}
+  @keyframes turbo-spin{to{transform:translateX(10px)}}
+  @media (prefers-reduced-motion: reduce){.vanes{animation:none}}
+</style>
 <defs>
   <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#101114"/><stop offset="1" stop-color="#1a1c20"/></linearGradient>
   <radialGradient id="glow" cx="1350" cy="830" r="900" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff7a1f" stop-opacity=".55"/><stop offset=".35" stop-color="#ff4d0d" stop-opacity=".18"/><stop offset="1" stop-color="#ff4d0d" stop-opacity="0"/></radialGradient>
@@ -13,12 +18,20 @@
   <linearGradient id="roofShade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0b0c0e" stop-opacity=".75"/><stop offset=".45" stop-color="#0b0c0e" stop-opacity=".35"/><stop offset="1" stop-color="#ff6a1a" stop-opacity=".12"/></linearGradient>
   <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b1f25"/><stop offset="1" stop-color="#121418"/></linearGradient>
   <linearGradient id="tsteel" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6b737c"/><stop offset=".35" stop-color="#ffffff"/><stop offset=".65" stop-color="#b8c0c8"/><stop offset="1" stop-color="#5a6068"/></linearGradient>
+  <!-- spinning turbo head: curved vanes slide sideways inside the dome outline, which reads as rotation -->
+  <clipPath id="domeClip"><path d="M-28 -36 C-28 -84 28 -84 28 -36 Z"/></clipPath>
+  <linearGradient id="domeShade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".55"/><stop offset=".3" stop-color="#000" stop-opacity="0"/><stop offset=".55" stop-color="#fff" stop-opacity=".18"/><stop offset=".75" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".6"/></linearGradient>
   <g id="turbo">
     <ellipse cx="0" cy="0" rx="36" ry="8" fill="#5a6068"/>
     <rect x="-22" y="-30" width="44" height="30" fill="url(#tsteel)"/>
     <rect x="-26" y="-36" width="52" height="8" rx="2" fill="url(#tsteel)"/>
     <path d="M-28 -36 C-28 -84 28 -84 28 -36 Z" fill="url(#tsteel)"/>
-    <g fill="none" stroke="#3a3f45" stroke-width="1.6" opacity=".8"><path d="M-24 -36 Q-4 -60 0 -72M-14 -36 Q3 -60 0 -72M-4 -36 Q10 -60 0 -72M6 -36 Q17 -60 0 -72M16 -36 Q24 -58 2 -71"/></g>
+    <g clip-path="url(#domeClip)">
+      <g class="vanes" fill="none" stroke="#3a3f45" stroke-width="2.2">
+        <path d="M-70 -36 C-56 -50 -58 -64 -68 -78M-60 -36 C-46 -50 -48 -64 -58 -78M-50 -36 C-36 -50 -38 -64 -48 -78M-40 -36 C-26 -50 -28 -64 -38 -78M-30 -36 C-16 -50 -18 -64 -28 -78M-20 -36 C-6 -50 -8 -64 -18 -78M-10 -36 C4 -50 2 -64 -8 -78M0 -36 C14 -50 12 -64 2 -78M10 -36 C24 -50 22 -64 12 -78M20 -36 C34 -50 32 -64 22 -78M30 -36 C44 -50 42 -64 32 -78M40 -36 C54 -50 52 -64 42 -78"/>
+      </g>
+    </g>
+    <path d="M-28 -36 C-28 -84 28 -84 28 -36 Z" fill="url(#domeShade)"/>
     <ellipse cx="0" cy="-72" rx="7" ry="3" fill="#c4cad1"/>
   </g>
   <g id="louver">

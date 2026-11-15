@@ -1,5 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="800" height="550">
+<style>
+  .vanes{animation:turbo-spin .9s linear infinite}
+  @keyframes turbo-spin{to{transform:translateX(21px)}}
+  @media (prefers-reduced-motion: reduce){.vanes{animation:none}}
+</style>
 <defs>
+  <clipPath id="domeClip"><path d="M300 292 C300 150 500 150 500 292 Z"/></clipPath>
+  <linearGradient id="domeShade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".5"/><stop offset=".3" stop-color="#000" stop-opacity="0"/><stop offset=".55" stop-color="#fff" stop-opacity=".15"/><stop offset=".75" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".55"/></linearGradient>
   <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#23272c"/><stop offset="1" stop-color="#121417"/></linearGradient>
   <radialGradient id="glow" cx="400" cy="240" r="360" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff6a1a" stop-opacity=".16"/><stop offset="1" stop-color="#ff6a1a" stop-opacity="0"/></radialGradient>
   <linearGradient id="rib" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1d3a80"/><stop offset=".35" stop-color="#6f9cf0"/><stop offset=".6" stop-color="#2b5bc4"/><stop offset="1" stop-color="#1d3a80"/></linearGradient>
@@ -22,15 +29,16 @@
 <rect x="312" y="288" width="176" height="16" rx="3" fill="url(#steel)"/>
 <!-- dome -->
 <path d="M300 292 C300 150 500 150 500 292 Z" fill="url(#steel)"/>
-<g fill="none" stroke="#4a5058" stroke-width="3" opacity=".75">
-  <path d="M306 292 Q362 215 400 170"/><path d="M327 292 Q377 215 400 170"/><path d="M348 292 Q392 215 400 170"/>
-  <path d="M369 292 Q406 215 400 170"/><path d="M390 292 Q421 215 400 170"/><path d="M411 292 Q436 215 400 170"/>
-  <path d="M432 292 Q450 215 400 170"/><path d="M453 292 Q465 215 400 170"/><path d="M474 292 Q480 215 400 170"/>
-  <path d="M495 292 Q494 230 420 176"/>
+<!-- spinning vanes: they slide sideways inside the dome outline, which reads as rotation -->
+<g clip-path="url(#domeClip)">
+  <g class="vanes" fill="none" stroke-linecap="round">
+    <g stroke="#fff" stroke-opacity=".4" stroke-width="1.5" transform="translate(4 0)">
+      <path id="vp" d="M216 292 C250 252 246 208 224 166M237 292 C271 252 267 208 245 166M258 292 C292 252 288 208 266 166M279 292 C313 252 309 208 287 166M300 292 C334 252 330 208 308 166M321 292 C355 252 351 208 329 166M342 292 C376 252 372 208 350 166M363 292 C397 252 393 208 371 166M384 292 C418 252 414 208 392 166M405 292 C439 252 435 208 413 166M426 292 C460 252 456 208 434 166M447 292 C481 252 477 208 455 166M468 292 C502 252 498 208 476 166M489 292 C523 252 519 208 497 166M510 292 C544 252 540 208 518 166"/>
+    </g>
+    <use href="#vp" stroke="#4a5058" stroke-width="3"/>
+  </g>
 </g>
-<g fill="none" stroke="#fff" stroke-width="1.5" opacity=".45">
-  <path d="M310 292 Q366 215 402 171"/><path d="M331 292 Q381 215 402 171"/><path d="M352 292 Q396 215 402 171"/>
-</g>
+<path d="M300 292 C300 150 500 150 500 292 Z" fill="url(#domeShade)"/>
 <ellipse cx="400" cy="172" rx="22" ry="8" fill="#c4cad1" stroke="#5a6068" stroke-width="2"/>
 <!-- airflow -->
 <g fill="none" stroke="#ff8a3a" stroke-width="4" stroke-linecap="round" opacity=".8">
