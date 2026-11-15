@@ -260,6 +260,8 @@ section{position:relative}
 .hero-media{position:absolute;inset:0;z-index:-3}
 /* REPLACE: hero image (or uncomment the <video> in the HTML) */
 .hero-media img,.hero-media video{width:100%;height:100%;object-fit:cover;filter:saturate(1.1) contrast(1.05)}
+/* On phones, shift the crop right so the torch tip and sparks stay on screen (the spark script reads this value) */
+@media(max-width:768px){.hero-media img,.hero-media video{object-position:70% 50%}}
 .hero::before{content:"";position:absolute;inset:0;z-index:-2;
   background:
     radial-gradient(ellipse 60% 50% at 78% 62%,rgba(255,106,26,.32),transparent 65%),
@@ -1040,7 +1042,7 @@ tbody td:first-child{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace
   if(canvas && !reduceMotion){
     var ctx = canvas.getContext("2d"), sparks = [], W = 0, H = 0, dpr = Math.min(window.devicePixelRatio || 1, 2), running = true;
     function setSize(w, h){
-      W = w; H = h;
+      W = w; H = h; if(typeof readCrop === "function") readCrop();
       canvas.width = W * dpr; canvas.height = H * dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
     }
     // ResizeObserver reports the size after layout, so loading the page never forces an early layout (no "forced reflow")
@@ -1050,7 +1052,14 @@ tbody td:first-child{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace
       setSize(canvas.clientWidth, canvas.clientHeight);
       window.addEventListener("resize", function(){ setSize(canvas.clientWidth, canvas.clientHeight); });
     }
-    function origin(){ return { x: W * (W < 768 ? .7 : .76), y: H * .62 }; }
+    // Sparks start at the torch's cut point in images/hero.svg (x 1350, y 840 of 1920x1080).
+    // The image is shown with object-fit:cover, so map that point through the same scale + crop the browser uses.
+    var heroImg = document.querySelector(".hero-media img"), posX = .5, posY = .5;
+    function readCrop(){ if(!heroImg) return; var op = getComputedStyle(heroImg).objectPosition.split(" "); posX = (parseFloat(op[0]) || 50) / 100; posY = (parseFloat(op[1]) || 50) / 100; }
+    function origin(){
+      var s = Math.max(W / 1920, H / 1080);
+      return { x: (W - 1920 * s) * posX + 1350 * s, y: (H - 1080 * s) * posY + 840 * s };
+    }
     function spawn(){
       var o = origin(), a = -Math.PI/2 + (Math.random() - .5) * Math.PI * 1.5, s = 2 + Math.random() * 6;
       sparks.push({ x:o.x, y:o.y, vx:Math.cos(a)*s + (Math.random()-.5), vy:Math.sin(a)*s, life:1, decay:.008 + Math.random()*.018, size:.8 + Math.random()*1.8 });
