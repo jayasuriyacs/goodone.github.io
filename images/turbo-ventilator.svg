@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="800" height="550">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#23272c"/><stop offset="1" stop-color="#121417"/></linearGradient>
+  <radialGradient id="glow" cx="400" cy="240" r="360" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff6a1a" stop-opacity=".16"/><stop offset="1" stop-color="#ff6a1a" stop-opacity="0"/></radialGradient>
+  <linearGradient id="rib" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#1d3a80"/><stop offset=".35" stop-color="#6f9cf0"/><stop offset=".6" stop-color="#2b5bc4"/><stop offset="1" stop-color="#1d3a80"/></linearGradient>
+  <pattern id="sheet" width="44" height="10" patternUnits="userSpaceOnUse"><rect width="44" height="10" fill="url(#rib)"/></pattern>
+  <linearGradient id="steel" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5a6068"/><stop offset=".3" stop-color="#f1f3f5"/><stop offset=".6" stop-color="#aab2ba"/><stop offset="1" stop-color="#4a5058"/></linearGradient>
+  <linearGradient id="fade" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#000" stop-opacity=".45"/><stop offset="1" stop-color="#000" stop-opacity="0"/></linearGradient>
+</defs>
+<rect width="800" height="550" fill="url(#bg)"/>
+<rect width="800" height="550" fill="url(#glow)"/>
+<!-- roof -->
+<g transform="translate(0 360) skewY(-6)">
+  <rect x="-40" y="0" width="900" height="260" fill="url(#sheet)" transform="skewX(-28)"/>
+  <rect x="-40" y="0" width="900" height="60" fill="url(#fade)"/>
+</g>
+<!-- flashing + neck -->
+<ellipse cx="400" cy="404" rx="160" ry="30" fill="#000" opacity=".35"/>
+<ellipse cx="400" cy="396" rx="150" ry="28" fill="url(#steel)"/>
+<rect x="322" y="300" width="156" height="96" fill="url(#steel)"/>
+<ellipse cx="400" cy="396" rx="78" ry="12" fill="#000" opacity=".15"/>
+<rect x="312" y="288" width="176" height="16" rx="3" fill="url(#steel)"/>
+<!-- dome -->
+<path d="M300 292 C300 150 500 150 500 292 Z" fill="url(#steel)"/>
+<g fill="none" stroke="#4a5058" stroke-width="3" opacity=".75">
+  <path d="M306 292 Q362 215 400 170"/><path d="M327 292 Q377 215 400 170"/><path d="M348 292 Q392 215 400 170"/>
+  <path d="M369 292 Q406 215 400 170"/><path d="M390 292 Q421 215 400 170"/><path d="M411 292 Q436 215 400 170"/>
+  <path d="M432 292 Q450 215 400 170"/><path d="M453 292 Q465 215 400 170"/><path d="M474 292 Q480 215 400 170"/>
+  <path d="M495 292 Q494 230 420 176"/>
+</g>
+<g fill="none" stroke="#fff" stroke-width="1.5" opacity=".45">
+  <path d="M310 292 Q366 215 402 171"/><path d="M331 292 Q381 215 402 171"/><path d="M352 292 Q396 215 402 171"/>
+</g>
+<ellipse cx="400" cy="172" rx="22" ry="8" fill="#c4cad1" stroke="#5a6068" stroke-width="2"/>
+<!-- airflow -->
+<g fill="none" stroke="#ff8a3a" stroke-width="4" stroke-linecap="round" opacity=".8">
+  <path d="M260 230 C240 180 270 140 250 100"/><path d="M243 112 L250 98 L262 108"/>
+  <path d="M540 230 C560 180 530 140 550 100"/><path d="M538 108 L550 98 L557 112"/>
+</g>
+</svg>

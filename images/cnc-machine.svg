@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="800" height="550">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#23272c"/><stop offset="1" stop-color="#121417"/></linearGradient>
+  <radialGradient id="glow" cx="420" cy="370" r="420" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff6a1a" stop-opacity=".28"/><stop offset="1" stop-color="#ff6a1a" stop-opacity="0"/></radialGradient>
+  <radialGradient id="hot" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fffbe6"/><stop offset=".3" stop-color="#ffd36a"/><stop offset=".65" stop-color="#ff6a1a" stop-opacity=".5"/><stop offset="1" stop-color="#ff4d0d" stop-opacity="0"/></radialGradient>
+  <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3f46"/><stop offset="1" stop-color="#555c64"/></linearGradient>
+  <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff8a3a"/><stop offset="1" stop-color="#b8501a"/></linearGradient>
+  <linearGradient id="steel" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#4a5058"/><stop offset=".4" stop-color="#e3e7eb"/><stop offset="1" stop-color="#5a6068"/></linearGradient>
+  <linearGradient id="copper" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7a3416"/><stop offset=".4" stop-color="#f0a070"/><stop offset="1" stop-color="#8a3c18"/></linearGradient>
+  <g id="head">
+    <rect x="-24" y="-12" width="48" height="56" rx="5" fill="#2b2f35" stroke="#5a6068" stroke-width="2"/>
+    <rect x="-8" y="44" width="16" height="74" fill="url(#steel)"/>
+    <path d="M-8 118 L8 118 L5 134 L-5 134 Z" fill="url(#copper)"/>
+    <path d="M-5 134 Q0 160 5 134 Z" fill="#4aa3ff" opacity=".65"/>
+  </g>
+</defs>
+<rect width="800" height="550" fill="url(#bg)"/>
+<rect width="800" height="550" fill="url(#glow)"/>
+<!-- bed -->
+<path d="M80 455 L740 455 L740 490 L80 490 Z" fill="#141619"/>
+<path d="M170 300 L650 300 L740 455 L80 455 Z" fill="#2b2f35"/>
+<path d="M190 312 L632 312 L710 444 L110 444 Z" fill="url(#plate)"/>
+<!-- slats -->
+<g stroke="#000" stroke-opacity=".18" stroke-width="2"><path d="M260 312 L210 444M340 312 L310 444M420 312 L410 444M500 312 L510 444M580 312 L610 444"/></g>
+<!-- cut parts -->
+<g fill="none" stroke-width="3">
+  <ellipse cx="250" cy="410" rx="48" ry="18" stroke="#9c2a08"/>
+  <rect x="500" y="395" width="110" height="34" stroke="#9c2a08" transform="skewX(-20)"/>
+  <path d="M300 335 h70 v14 h-70 z" stroke="#7a2006"/>
+</g>
+<ellipse cx="250" cy="410" rx="42" ry="15" fill="#111316"/>
+<path d="M352 370 C352 355 420 355 420 370" stroke="#ff6a1a" stroke-width="4" fill="none"/>
+<path d="M500 372 L560 372" stroke="#ff6a1a" stroke-width="4"/>
+<path d="M440 372 L500 372" stroke="#9c2a08" stroke-width="4"/>
+<!-- rails -->
+<path d="M150 292 L52 462" stroke="url(#steel)" stroke-width="12" stroke-linecap="round"/>
+<path d="M670 292 L768 462" stroke="url(#steel)" stroke-width="12" stroke-linecap="round"/>
+<!-- gantry -->
+<rect x="88" y="222" width="36" height="150" rx="4" fill="url(#beam)"/>
+<rect x="696" y="222" width="36" height="150" rx="4" fill="url(#beam)"/>
+<rect x="76" y="360" width="60" height="24" rx="4" fill="#2b2f35"/>
+<rect x="684" y="360" width="60" height="24" rx="4" fill="#2b2f35"/>
+<rect x="80" y="184" width="660" height="48" rx="6" fill="url(#beam)"/>
+<rect x="80" y="184" width="660" height="8" rx="4" fill="#fff" opacity=".2"/>
+<rect x="110" y="166" width="580" height="18" rx="4" fill="#1b1e22"/>
+<path d="M114 175 H686" stroke="#5a6068" stroke-width="10" stroke-dasharray="12 6"/>
+<!-- hot spots -->
+<ellipse cx="420" cy="372" rx="70" ry="22" fill="url(#hot)"/>
+<ellipse cx="560" cy="372" rx="70" ry="22" fill="url(#hot)"/>
+<use href="#head" transform="translate(420 226)"/>
+<use href="#head" transform="translate(560 226)"/>
+<g stroke-linecap="round" stroke-width="2">
+  <g stroke="#ffd36a"><path d="M424 372 L470 340"/><path d="M416 372 L380 342"/><path d="M420 376 L450 410"/><path d="M564 372 L610 344"/><path d="M556 372 L520 346"/><path d="M560 376 L600 410"/></g>
+</g>
+<!-- control pendant -->
+<rect x="20" y="150" width="56" height="80" rx="6" fill="#1b1e22" stroke="#5a6068" stroke-width="2"/>
+<rect x="28" y="160" width="40" height="26" rx="2" fill="#1f6b8c"/>
+<circle cx="38" cy="204" r="5" fill="#2ecc71"/><circle cx="58" cy="204" r="5" fill="#d33a2c"/>
+<path d="M48 230 V300" stroke="#5a6068" stroke-width="6"/>
+</svg>

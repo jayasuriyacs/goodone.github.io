@@ -1,39 +1,993 @@
-<!doctype html>
-<html lang="en" class="no-js">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <base target="_blank">
-  <meta charset="UTF-8" />
-  <title>C4 Engineering Co</title>
-  <link rel="shortcut icon" type="image/png" href="assets/logo.png">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta property="og:title" content="C4 Engineering Co">
-  <meta property="og:url" content="https://www.c4group.co.in">
-  <meta property="og:image" content="https://c4group.co.in/assets/logo.png">
-  <meta name="description" content="Our mission: to help people learn to code for free. We accomplish this by creating thousands of videos, articles, and interactive coding lessons - all freely available to the public.">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous" type="text/css">
-  <!-- remember, jQuery is completely optional -->
-  <!-- <script type='text/javascript' src='js/jquery-1.11.1.min.js'></script> -->
-  <script type="text/javascript" src="js/jquery.particleground.js"></script>
-  <script type="text/javascript" src="js/demo.js"></script>
+<!-- ============ SEO ============ -->
+<!-- REPLACE: every "[Your Company Name]" / "YourCompany" in this file with your real name (Find & Replace). -->
+<title>C4 Engineering Co | Industrial Gas Cutting Torches, Machines & Equipment</title>
+<meta name="description" content="C4 Engineering Co supplies precision gas cutting torches, cutting nozzles, portable & CNC gas cutting machines, turbo, ridge, louver and electric ventilators, and roof sheet installation. ISO certified quality, fast delivery.">
+<meta name="keywords" content="gas cutting torch, industrial gas cutting, iron cutting machine, steel cutting, cutting nozzle, CNC gas cutting machine, portable gas cutting machine, turbo ventilator, roof ventilator, ridge ventilator, shed louver vent, electric ventilator, industrial exhaust fan, roof sheet installation, roofing sheets">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0e0f11">
+<link rel="canonical" href="https://www.yourcompany.com/">
+
+<!-- Open Graph / social sharing -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="C4 Engineering Co | Precision Gas Cutting Solutions">
+<meta property="og:description" content="Gas cutting torches, CNC cutting machines, industrial ventilators and roof sheet installation.">
+<meta property="og:image" content="https://placehold.co/1200x630/0e0f11/ff6a1a?text=Your+Company+Name">
+<meta property="og:url" content="https://www.yourcompany.com/">
+<meta name="twitter:card" content="summary_large_image">
+
+<!-- Favicon (inline flame SVG) — REPLACE with your own favicon if you have one -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e0f11'/%3E%3Cpath d='M32 8c4 10 14 16 14 28a14 14 0 0 1-28 0c0-7 4-11 6-15 1 5 3 7 5 8-1-8 1-15 3-21z' fill='%23ff6a1a'/%3E%3C/svg%3E">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+<!-- Structured data for local SEO — REPLACE details -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "C4 Engineering Co",
+  "description": "Gas cutting equipment, industrial ventilators and roof sheet installation.",
+  "url": "https://www.yourcompany.com/",
+  "telephone": "+91-96775-58464",
+  "email": "info@C4group.co.in",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Plot No. 29A, Eswaran Kovil Street, Irugur",
+    "addressLocality": "Coimbatore",
+    "addressRegion": "Tamil Nadu",
+    "postalCode": "641103",
+    "addressCountry": "IN"
+  },
+  "openingHours": "Mo-Sa 09:00-19:00"
+}
+</script>
+
+<style>
+/* =========================================================
+   DESIGN TOKENS — change colors/fonts here
+   ========================================================= */
+:root{
+  --bg:#0e0f11;            /* near-black */
+  --bg-2:#15171a;          /* charcoal */
+  --bg-3:#1d2024;          /* raised surface */
+  --line:#2b2f35;
+  --steel:#8b939c;         /* steel gray */
+  --steel-light:#c4cad1;
+  --text:#f3f4f6;
+  --text-dim:#a9b0b8;
+  --flame:#ff6a1a;         /* molten orange */
+  --flame-2:#ffb020;       /* amber */
+  --flame-grad:linear-gradient(135deg,#ff4d0d 0%,#ff6a1a 40%,#ffb020 100%);
+  --glow:0 0 24px rgba(255,106,26,.45);
+  --radius:10px;
+  --font-head:"Barlow Condensed","Oswald","Arial Narrow",sans-serif;
+  --font-body:"Inter","Manrope",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --header-h:84px;
+  --container:1200px;
+  --ease:cubic-bezier(.2,.7,.2,1);
+}
+
+/* =========================================================
+   BASE
+   ========================================================= */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:var(--font-body);font-size:16px;line-height:1.65;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block;height:auto}
+a{color:inherit;text-decoration:none}
+button,input,select,textarea{font:inherit;color:inherit}
+h1,h2,h3,h4{font-family:var(--font-head);font-weight:700;line-height:1.05;margin:0 0 .5em;letter-spacing:.01em;text-transform:uppercase}
+p{margin:0 0 1em}
+:focus-visible{outline:2px solid var(--flame-2);outline-offset:3px;border-radius:4px}
+.container{width:100%;max-width:var(--container);margin:0 auto;padding:0 16px}
+@media(min-width:768px){.container{padding:0 32px}}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}
+.skip-link{position:absolute;left:16px;top:-60px;background:var(--flame);color:#000;padding:10px 16px;border-radius:6px;z-index:200;font-weight:600}
+.skip-link:focus{top:12px}
+
+/* Brushed-metal texture used on several surfaces */
+.metal{
+  background-color:var(--bg-2);
+  background-image:
+    repeating-linear-gradient(90deg,rgba(255,255,255,.018) 0 1px,transparent 1px 3px),
+    repeating-linear-gradient(0deg,rgba(0,0,0,.18) 0 1px,transparent 1px 4px),
+    linear-gradient(180deg,#17191c,#121416);
+}
+
+/* Section scaffolding + angular dividers */
+section{position:relative}
+.section{padding:96px 0}
+@media(max-width:767px){.section{padding:72px 0}}
+.angle-top{clip-path:polygon(0 48px,100% 0,100% 100%,0 100%);margin-top:-48px;padding-top:144px}
+.angle-both{clip-path:polygon(0 48px,100% 0,100% calc(100% - 48px),0 100%);margin-top:-48px;padding-top:144px;padding-bottom:144px}
+@media(max-width:767px){
+  .angle-top,.angle-both{clip-path:polygon(0 24px,100% 0,100% 100%,0 100%);margin-top:-24px;padding-top:96px}
+  .angle-both{clip-path:polygon(0 24px,100% 0,100% calc(100% - 24px),0 100%);padding-bottom:96px}
+}
+
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-family:var(--font-head);font-weight:600;font-size:.95rem;letter-spacing:.2em;text-transform:uppercase;color:var(--flame-2);margin-bottom:14px}
+.eyebrow::before{content:"";width:28px;height:2px;background:var(--flame-grad);box-shadow:var(--glow)}
+.section-head{max-width:720px;margin-bottom:48px}
+.section-head h2{font-size:clamp(2.2rem,5vw,3.6rem)}
+.section-head p{color:var(--text-dim);font-size:1.075rem}
+.text-flame{background:var(--flame-grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:12px 26px;border-radius:6px;border:1px solid transparent;font-family:var(--font-head);font-weight:700;font-size:1.05rem;letter-spacing:.08em;text-transform:uppercase;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s var(--ease),background .25s,color .25s,border-color .25s;position:relative;overflow:hidden;white-space:nowrap}
+.btn svg{width:18px;height:18px;flex:none}
+.btn-primary{background:var(--flame-grad);color:#140800;box-shadow:0 6px 24px -6px rgba(255,106,26,.6)}
+.btn-primary::after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.45) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s var(--ease)}
+.btn-primary:hover{transform:translateY(-2px);box-shadow:0 10px 32px -6px rgba(255,106,26,.85)}
+.btn-primary:hover::after{transform:translateX(120%)}
+.btn-ghost{background:rgba(255,255,255,.04);border-color:rgba(255,255,255,.25);color:var(--text);backdrop-filter:blur(6px)}
+.btn-ghost:hover{border-color:var(--flame);color:var(--flame-2);transform:translateY(-2px)}
+.btn-sm{min-height:40px;padding:8px 18px;font-size:.95rem}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+.site-header{position:fixed;inset:0 0 auto 0;z-index:100;height:var(--header-h);display:flex;align-items:center;transition:height .3s var(--ease),background .3s,box-shadow .3s,border-color .3s;border-bottom:1px solid transparent}
+.site-header.scrolled{--header-h:64px;background:rgba(14,15,17,.88);backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);border-color:var(--line);box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:24px;width:100%}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--font-head);font-weight:800;font-size:1.55rem;letter-spacing:.04em;text-transform:uppercase}
+.logo-mark{width:38px;height:38px;flex:none;transition:transform .3s var(--ease)}
+.site-header.scrolled .logo-mark{transform:scale(.88)}
+.logo span{color:var(--flame)}
+.nav-links{display:flex;gap:6px;list-style:none;margin:0;padding:0}
+.nav-links a{position:relative;display:block;padding:10px 16px;font-family:var(--font-head);font-weight:600;font-size:1.08rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel-light);transition:color .2s}
+.nav-links a::after{content:"";position:absolute;left:16px;right:16px;bottom:4px;height:2px;background:var(--flame-grad);transform:scaleX(0);transform-origin:left;transition:transform .3s var(--ease);box-shadow:var(--glow)}
+.nav-links a:hover,.nav-links a.active{color:#fff}
+.nav-links a:hover::after,.nav-links a.active::after{transform:scaleX(1)}
+.nav-cta{display:flex;align-items:center;gap:12px}
+.hamburger{display:none;width:46px;height:46px;border:1px solid var(--line);border-radius:8px;background:rgba(255,255,255,.04);cursor:pointer;position:relative}
+.hamburger span{position:absolute;left:12px;right:12px;height:2px;background:#fff;border-radius:2px;transition:transform .3s var(--ease),opacity .2s,top .3s var(--ease)}
+.hamburger span:nth-child(1){top:15px}.hamburger span:nth-child(2){top:22px}.hamburger span:nth-child(3){top:29px}
+.hamburger[aria-expanded="true"] span:nth-child(1){top:22px;transform:rotate(45deg)}
+.hamburger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.hamburger[aria-expanded="true"] span:nth-child(3){top:22px;transform:rotate(-45deg)}
+
+@media(max-width:899px){
+  .hamburger{display:block}
+  .nav-cta .btn{display:none}
+  .nav-links{position:fixed;top:0;right:0;height:100dvh;width:min(320px,86vw);flex-direction:column;gap:4px;padding:96px 24px 32px;background:var(--bg-2);border-left:1px solid var(--line);transform:translateX(100%);transition:transform .4s var(--ease);box-shadow:-30px 0 60px rgba(0,0,0,.5)}
+  .nav-links.open{transform:none}
+  .nav-links a{font-size:1.5rem;padding:14px 8px;border-bottom:1px solid var(--line)}
+  .nav-links a::after{left:8px;right:auto;width:40px}
+  .nav-links .mobile-cta{display:block;margin-top:24px}
+  .nav-links .mobile-cta .btn{width:100%}
+  .hamburger{z-index:2}
+  .nav-backdrop{position:fixed;inset:0;background:rgba(0,0,0,.55);opacity:0;pointer-events:none;transition:opacity .3s}
+  .nav-backdrop.show{opacity:1;pointer-events:auto}
+}
+@media(min-width:900px){.nav-links .mobile-cta{display:none}.nav-backdrop{display:none}}
+
+/* =========================================================
+   HERO
+   ========================================================= */
+.hero{min-height:100vh;min-height:100svh;display:flex;align-items:center;padding:calc(var(--header-h) + 40px) 0 120px;overflow:hidden;isolation:isolate}
+.hero-media{position:absolute;inset:0;z-index:-3}
+/* REPLACE: hero image (or uncomment the <video> in the HTML) */
+.hero-media img,.hero-media video{width:100%;height:100%;object-fit:cover;filter:saturate(1.1) contrast(1.05)}
+.hero::before{content:"";position:absolute;inset:0;z-index:-2;
+  background:
+    radial-gradient(ellipse 60% 50% at 78% 62%,rgba(255,106,26,.32),transparent 65%),
+    linear-gradient(90deg,rgba(10,11,12,.96) 0%,rgba(10,11,12,.8) 42%,rgba(10,11,12,.3) 70%,rgba(10,11,12,.2) 100%),
+    linear-gradient(0deg,var(--bg) 0%,transparent 30%)}
+#sparks{position:absolute;inset:0;z-index:-1;width:100%;height:100%;pointer-events:none}
+.hero-content{max-width:760px}
+.hero h1{font-size:clamp(2.9rem,8.2vw,6.2rem);font-weight:800;line-height:.95;margin-bottom:24px}
+.hero h1 .text-flame{display:inline-block;filter:drop-shadow(0 0 22px rgba(255,106,26,.45))}
+.hero-sub{font-size:clamp(1.05rem,2vw,1.25rem);color:var(--steel-light);max-width:580px;margin-bottom:36px}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;padding:8px 14px;border:1px solid rgba(255,176,32,.35);border-radius:999px;background:rgba(255,106,26,.08);font-size:.85rem;font-weight:500;color:var(--flame-2);margin-bottom:24px}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:var(--flame);box-shadow:0 0 0 0 rgba(255,106,26,.7);animation:pulse 2s infinite}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(255,106,26,.7)}70%{box-shadow:0 0 0 10px rgba(255,106,26,0)}100%{box-shadow:0 0 0 0 rgba(255,106,26,0)}}
+.scroll-cue{position:absolute;bottom:90px;left:50%;transform:translateX(-50%);width:26px;height:42px;border:2px solid rgba(255,255,255,.35);border-radius:14px}
+.scroll-cue::after{content:"";position:absolute;left:50%;top:8px;width:4px;height:8px;margin-left:-2px;background:var(--flame);border-radius:2px;animation:cue 1.8s infinite}
+@keyframes cue{0%{opacity:0;transform:translateY(0)}40%{opacity:1}100%{opacity:0;transform:translateY(14px)}}
+@media(max-width:767px){.scroll-cue{display:none}}
+
+/* =========================================================
+   TRUST STRIP
+   ========================================================= */
+.trust{position:relative;z-index:2;margin-top:-80px}
+.trust-grid{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 30px 60px -20px rgba(0,0,0,.7)}
+@media(min-width:768px){.trust-grid{grid-template-columns:repeat(4,1fr)}}
+.trust-item{padding:28px 20px;text-align:center;border-right:1px solid var(--line);border-bottom:1px solid var(--line);position:relative}
+.trust-item:nth-child(2n){border-right:0}
+@media(min-width:768px){.trust-item{border-bottom:0}.trust-item:nth-child(2n){border-right:1px solid var(--line)}.trust-item:last-child{border-right:0}}
+.trust-item::before{content:"";position:absolute;top:0;left:50%;width:40px;height:2px;margin-left:-20px;background:var(--flame-grad);box-shadow:var(--glow)}
+.trust-num{font-family:var(--font-head);font-weight:800;font-size:clamp(2.4rem,5vw,3.4rem);line-height:1;color:#fff}
+.trust-num .suffix{color:var(--flame)}
+.trust-label{margin-top:8px;font-size:.85rem;letter-spacing:.12em;text-transform:uppercase;color:var(--text-dim)}
+
+/* =========================================================
+   WHY CHOOSE US
+   ========================================================= */
+.features{display:grid;gap:20px;grid-template-columns:1fr}
+@media(min-width:600px){.features{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.features{grid-template-columns:repeat(4,1fr)}}
+.feature{position:relative;padding:32px 26px;border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,var(--bg-3),var(--bg-2));overflow:hidden;transition:transform .35s var(--ease),border-color .35s,box-shadow .35s}
+.feature::after{content:"";position:absolute;inset:auto -40% -60% auto;width:220px;height:220px;background:radial-gradient(circle,rgba(255,106,26,.28),transparent 70%);opacity:0;transition:opacity .4s}
+.feature:hover{transform:translateY(-6px);border-color:rgba(255,106,26,.55);box-shadow:0 20px 40px -18px rgba(255,106,26,.35)}
+.feature:hover::after{opacity:1}
+.feature-icon{width:56px;height:56px;display:grid;place-items:center;border-radius:10px;background:rgba(255,106,26,.1);border:1px solid rgba(255,106,26,.3);color:var(--flame);margin-bottom:22px;clip-path:polygon(12px 0,100% 0,100% calc(100% - 12px),calc(100% - 12px) 100%,0 100%,0 12px)}
+.feature-icon svg{width:28px;height:28px}
+.feature h3{font-size:1.55rem;margin-bottom:10px}
+.feature p{color:var(--text-dim);margin:0;font-size:.97rem}
+
+/* =========================================================
+   PRODUCTS
+   ========================================================= */
+.filters{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:40px}
+.filter-btn{min-height:44px;padding:8px 20px;border:1px solid var(--line);border-radius:999px;background:var(--bg-3);font-family:var(--font-head);font-weight:600;font-size:1rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel-light);cursor:pointer;transition:all .25s var(--ease)}
+.filter-btn:hover{border-color:var(--steel);color:#fff}
+.filter-btn[aria-pressed="true"]{background:var(--flame-grad);border-color:transparent;color:#140800;box-shadow:0 6px 20px -6px rgba(255,106,26,.6)}
+.product-grid{display:grid;gap:24px;grid-template-columns:1fr}
+@media(min-width:640px){.product-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.product-grid{grid-template-columns:repeat(3,1fr)}}
+.product{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);background:var(--bg-2);overflow:hidden;transition:transform .35s var(--ease),border-color .35s,box-shadow .35s,opacity .35s}
+.product:hover{transform:translateY(-6px);border-color:rgba(255,106,26,.5);box-shadow:0 24px 48px -20px rgba(0,0,0,.8),0 0 0 1px rgba(255,106,26,.15)}
+.product.hide{display:none}
+.product.fade-in{animation:fadeUp .45s var(--ease) both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+.product-media{position:relative;aspect-ratio:16/11;overflow:hidden;background:var(--bg-3)}
+.product-media img{width:100%;height:100%;object-fit:cover;transition:transform .6s var(--ease)}
+.product:hover .product-media img{transform:scale(1.06)}
+.product-media::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(14,15,17,.75),transparent 55%)}
+.product-tag{position:absolute;top:14px;left:14px;z-index:1;padding:4px 12px;border-radius:4px;background:rgba(14,15,17,.8);border:1px solid rgba(255,176,32,.4);font-family:var(--font-head);font-weight:600;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;color:var(--flame-2)}
+.product-body{display:flex;flex-direction:column;flex:1;padding:24px}
+.product h3{font-size:1.6rem;margin-bottom:8px}
+.product-desc{color:var(--text-dim);font-size:.95rem}
+.specs{list-style:none;margin:4px 0 22px;padding:14px 0 0;border-top:1px dashed var(--line);display:grid;gap:8px;font-size:.88rem}
+.specs li{display:flex;justify-content:space-between;gap:12px}
+.specs span:first-child{color:var(--steel)}
+.specs span:last-child{color:var(--text);font-weight:500;text-align:right}
+.product .btn{margin-top:auto;align-self:flex-start}
+
+/* =========================================================
+   CATALOG
+   ========================================================= */
+.catalog-banner{position:relative;display:grid;gap:28px;align-items:center;padding:40px 28px;border-radius:14px;overflow:hidden;background:
+  radial-gradient(ellipse 50% 90% at 100% 50%,rgba(255,106,26,.35),transparent 70%),
+  linear-gradient(120deg,#1b1d21,#121315);border:1px solid rgba(255,106,26,.35);margin-bottom:56px}
+.catalog-banner::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(-45deg,transparent 0 22px,rgba(255,255,255,.025) 22px 23px);pointer-events:none}
+@media(min-width:860px){.catalog-banner{grid-template-columns:auto 1fr auto;padding:44px 48px}}
+.catalog-icon{width:84px;height:100px;position:relative;flex:none}
+.catalog-banner h3{font-size:clamp(1.8rem,3.6vw,2.6rem);margin-bottom:6px}
+.catalog-banner p{color:var(--steel-light);margin:0}
+.catalog-meta{display:flex;flex-wrap:wrap;gap:16px;margin-top:12px;font-size:.85rem;color:var(--text-dim)}
+.catalog-meta b{color:var(--flame-2);font-weight:600}
+
+.catalog-layout{display:grid;gap:40px}
+@media(min-width:1024px){.catalog-layout{grid-template-columns:5fr 7fr;align-items:start}}
+.subhead{font-size:1.7rem;margin-bottom:20px;display:flex;align-items:center;gap:12px}
+.subhead::after{content:"";flex:1;height:1px;background:var(--line)}
+
+.accordion{display:grid;gap:10px}
+.acc-item{border:1px solid var(--line);border-radius:8px;background:var(--bg-2);overflow:hidden;transition:border-color .3s}
+.acc-item.open{border-color:rgba(255,106,26,.5)}
+.acc-trigger{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 20px;background:none;border:0;cursor:pointer;text-align:left}
+.acc-trigger .t{font-family:var(--font-head);font-weight:700;font-size:1.3rem;letter-spacing:.04em;text-transform:uppercase}
+.acc-trigger .c{font-size:.8rem;color:var(--text-dim);margin-left:auto;margin-right:8px;white-space:nowrap}
+.acc-trigger .chev{width:30px;height:30px;flex:none;display:grid;place-items:center;border-radius:6px;background:var(--bg-3);transition:transform .3s var(--ease),background .3s}
+.acc-item.open .chev{transform:rotate(45deg);background:var(--flame);color:#140800}
+.acc-panel{display:grid;grid-template-rows:0fr;transition:grid-template-rows .4s var(--ease)}
+.acc-item.open .acc-panel{grid-template-rows:1fr}
+.acc-panel>div{overflow:hidden}
+.acc-panel ul{list-style:none;margin:0;padding:0 20px 18px;display:grid;gap:8px}
+.acc-panel li{display:flex;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:6px;background:var(--bg-3);font-size:.92rem}
+.acc-panel li code{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;color:var(--flame-2);font-size:.85rem;white-space:nowrap}
+
+.spec-tabs{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px}
+.spec-tabs .filter-btn{min-height:40px;padding:6px 16px;font-size:.92rem}
+.spec-tabs .filter-btn[aria-selected="true"]{background:var(--flame-grad);border-color:transparent;color:#140800;box-shadow:0 6px 20px -6px rgba(255,106,26,.6)}
+.table-wrap[hidden]{display:none}
+.table-wrap{border:1px solid var(--line);border-radius:10px;overflow-x:auto;background:var(--bg-2);-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;min-width:620px;font-size:.92rem}
+caption{text-align:left;padding:14px 18px;color:var(--text-dim);font-size:.82rem;caption-side:bottom;border-top:1px solid var(--line)}
+th,td{padding:14px 18px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap}
+thead th{position:sticky;top:0;background:var(--bg-3);font-family:var(--font-head);font-weight:700;font-size:1rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel-light)}
+tbody tr{transition:background .2s}
+tbody tr:hover{background:rgba(255,106,26,.06)}
+tbody td:first-child{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;color:var(--flame-2)}
+.por{display:inline-block;padding:3px 10px;border-radius:999px;border:1px solid rgba(255,176,32,.4);color:var(--flame-2);font-size:.78rem;font-weight:500}
+
+/* =========================================================
+   CONTACT
+   ========================================================= */
+.contact-grid{display:grid;gap:32px}
+@media(min-width:900px){.contact-grid{grid-template-columns:5fr 7fr;align-items:stretch}}
+.card{border:1px solid var(--line);border-radius:14px;padding:32px 24px;background:var(--bg-2)}
+@media(min-width:768px){.card{padding:40px}}
+
+.info-list{list-style:none;margin:0 0 28px;padding:0;display:grid;gap:20px}
+.info-list li{display:flex;gap:16px;align-items:flex-start}
+.info-ico{width:46px;height:46px;flex:none;display:grid;place-items:center;border-radius:10px;background:rgba(255,106,26,.1);border:1px solid rgba(255,106,26,.3);color:var(--flame)}
+.info-ico svg{width:22px;height:22px}
+.info-list h4{font-size:1.05rem;letter-spacing:.12em;color:var(--steel);margin:0 0 2px}
+.info-list p,.info-list a{margin:0;color:var(--text);font-size:1rem}
+.info-list a:hover{color:var(--flame-2)}
+.btn-wa{background:#25d366;color:#04230f;width:100%}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 10px 28px -8px rgba(37,211,102,.7)}
+.hours{width:100%;font-size:.92rem;min-width:0}
+.hours td{padding:4px 0;border:0;white-space:normal}
+.hours td:last-child{text-align:right;color:var(--text-dim)}
+.map{border-radius:14px;overflow:hidden;border:1px solid var(--line);min-height:360px;background:var(--bg-3);position:relative}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0;filter:grayscale(1) invert(.92) contrast(.9) hue-rotate(180deg)}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+.site-footer{padding:120px 0 0;border-top:1px solid var(--line);position:relative}
+.site-footer::before{content:"";position:absolute;top:-1px;left:0;width:min(40%,420px);height:2px;background:var(--flame-grad);box-shadow:var(--glow)}
+.footer-grid{display:grid;gap:40px;grid-template-columns:1fr}
+@media(min-width:640px){.footer-grid{grid-template-columns:1fr 1fr}}
+@media(min-width:1024px){.footer-grid{grid-template-columns:2fr 1fr 1fr 1.3fr}}
+.footer-grid h4{font-size:1.2rem;letter-spacing:.14em;color:var(--steel-light);margin-bottom:18px}
+.footer-grid ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.footer-grid ul a{color:var(--text-dim);transition:color .2s,padding .2s}
+.footer-grid ul a:hover{color:var(--flame-2);padding-left:4px}
+.footer-blurb{color:var(--text-dim);max-width:360px;margin:18px 0 22px}
+.socials{display:flex;gap:10px}
+.socials a{width:44px;height:44px;display:grid;place-items:center;border-radius:8px;border:1px solid var(--line);background:var(--bg-2);color:var(--steel-light);transition:all .25s var(--ease)}
+.socials a:hover{color:#140800;background:var(--flame);border-color:var(--flame);transform:translateY(-3px);box-shadow:var(--glow)}
+.socials svg{width:18px;height:18px}
+.footer-bottom{margin-top:64px;padding:24px 0 110px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;font-size:.85rem;color:var(--text-dim)}
+@media(min-width:768px){.footer-bottom{padding-bottom:28px}}
+
+/* =========================================================
+   FLOATING ACTION BUTTONS
+   ========================================================= */
+.fab-stack{position:fixed;right:16px;bottom:16px;z-index:90;display:flex;flex-direction:column;gap:12px}
+.fab{width:58px;height:58px;border-radius:50%;display:grid;place-items:center;box-shadow:0 10px 30px -6px rgba(0,0,0,.6);transition:transform .25s var(--ease)}
+.fab:hover{transform:scale(1.08)}
+.fab svg{width:28px;height:28px}
+.fab-wa{background:#25d366;color:#fff;position:relative}
+.fab-wa::before{content:"";position:absolute;inset:0;border-radius:50%;border:2px solid #25d366;animation:ring 2.4s infinite}
+@keyframes ring{0%{transform:scale(1);opacity:.8}100%{transform:scale(1.6);opacity:0}}
+.fab-call{background:var(--flame-grad);color:#140800}
+.to-top{width:46px;height:46px;align-self:center;border-radius:50%;border:1px solid var(--line);background:var(--bg-3);color:#fff;cursor:pointer;display:grid;place-items:center;opacity:0;pointer-events:none;transform:translateY(10px);transition:all .3s var(--ease)}
+.to-top.show{opacity:1;pointer-events:auto;transform:none}
+.to-top svg{width:20px;height:20px}
+
+/* =========================================================
+   SCROLL REVEAL
+   ========================================================= */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
+.reveal.in{opacity:1;transform:none}
+.reveal[data-delay="1"]{transition-delay:.08s}.reveal[data-delay="2"]{transition-delay:.16s}.reveal[data-delay="3"]{transition-delay:.24s}
+.no-js .reveal{opacity:1;transform:none}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+  .reveal{opacity:1;transform:none}
+  #sparks{display:none}
+}
+</style>
 </head>
 
-<body>
-  <div id="particles">
-    <div id="intro">
-        <h2 style="font-family: 'Syncopate', sans-serif; font-weight: 10;">C4 Engineering Co</h2>
-          <!--<hr style="width: 50%; background-color: #E83951; border-color: #E83951;">-->
-      <a href="https://www.linkedin.com/in/#/" style="color: white;"><i class="fab fa-linkedin" style="font-size: 2em;"></i></a>
-      &nbsp
-      <a href="https://www.facebook.com/profile.php?id=100087350510761" style="color: white;"><i class="fab fa-facebook" style="font-size: 2em;"></i></a>
-      &nbsp
-      <a href="https://instagram.com/cfour_engg?igshid=YmMyMTA2M2Y=" style="color: white;"><i class="fab fa-instagram" style="font-size: 2em;"></i></a>
-      &nbsp
-      <a href="https://www.indiamart.com/c4-engineering-co/" style="color: white;"><i class="fa fa-link" style="font-size: 2em;"></i></a>
-      &nbsp
-      <a href="https://youtu.be/qBAF6yCtlWs" style="color: white;"><i class="fab fa-youtube" style="font-size: 2em;"></i></a>
+<body class="no-js">
+<a href="#main" class="skip-link">Skip to content</a>
+
+<!-- =========================================================
+     HEADER
+     ========================================================= -->
+<header class="site-header" id="header">
+  <div class="container">
+    <nav class="nav" aria-label="Primary">
+      <a href="#home" class="logo" aria-label="C4 Engineering Co home">
+        <!-- REPLACE: swap this SVG for <img src="logo.svg" alt="[Your Company Name]" class="logo-mark"> -->
+        <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true">
+          <defs><linearGradient id="lg" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#ff4d0d"/><stop offset="1" stop-color="#ffb020"/></linearGradient></defs>
+          <path d="M4 10 L20 2 L36 10 V30 L20 38 L4 30 Z" fill="none" stroke="#8b939c" stroke-width="2"/>
+          <path d="M20 8c3 7 9 10 9 18a9 9 0 0 1-18 0c0-4.5 2.5-7 4-9.5.6 3 2 4.5 3.2 5-.6-5 .6-9.6 1.8-13.5z" fill="url(#lg)"/>
+        </svg>
+        C4<span>Engineering Co</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#catalog">Catalog</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="mobile-cta"><a href="#contact" class="btn btn-primary" data-quote>Get a Quote</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary btn-sm" data-quote>Get a Quote</a>
+        <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="navLinks"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </div>
+  <div class="nav-backdrop" id="navBackdrop"></div>
+</header>
+
+<main id="main">
+
+<!-- =========================================================
+     1. HOME / HERO
+     ========================================================= -->
+<section class="hero" id="home" aria-labelledby="hero-title">
+  <div class="hero-media" aria-hidden="true">
+    <!-- REPLACE: your own hero photo (1920×1080+, gas cutting / sparks). -->
+    <img src="images/hero.svg" alt="" fetchpriority="high">
+    <!-- OR use a video instead of the image:
+    <video autoplay muted loop playsinline poster="hero-poster.jpg">
+      <source src="hero-sparks.mp4" type="video/mp4">
+    </video> -->
+  </div>
+  <canvas id="sparks" aria-hidden="true"></canvas>
+
+  <div class="container">
+    <div class="hero-content">
+      <h1 id="hero-title" class="reveal" data-delay="1"><span class="text-flame">Roofing</span> Solutions for Industries</h1>
+      <p class="hero-sub reveal" data-delay="2">Cutting torches and CNC machines for clean cuts through iron and steel, plus industrial ventilators and roof sheet installation. Built for quality, certified for safety, delivered on time.</p>
+      <div class="hero-actions reveal" data-delay="3">
+        <a href="#products" class="btn btn-primary">View Products
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a href="#contact" class="btn btn-ghost">Contact Us</a>
+      </div>
     </div>
   </div>
+  <div class="scroll-cue" aria-hidden="true"></div>
+</section>
+
+<!-- Trust strip -->
+<section class="trust" aria-label="Company highlights">
+  <div class="container">
+    <div class="trust-grid metal reveal">
+      <!-- REPLACE: numbers in data-target -->
+      <!-- REPLACE: set each data-target to your real figures -->
+      <div class="trust-item"><div class="trust-num"><span class="counter" data-target="1000">0</span><span class="suffix">+</span></div><div class="trust-label">Projects Completed</div></div>
+      <div class="trust-item"><div class="trust-num"><span class="counter" data-target="10000">0</span><span class="suffix">+</span></div><div class="trust-label">Ventilators Installed</div></div>
+      <div class="trust-item"><div class="trust-num"><span class="counter" data-target="100000">0</span><span class="suffix">+</span></div><div class="trust-label">Sq.ft Roofing Installed</div></div>
+      <div class="trust-item"><div class="trust-num">24<span class="suffix">/</span>7</div><div class="trust-label">Service Support</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Why choose us -->
+<section class="section" aria-labelledby="why-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Why Choose Us</span>
+      <h2 id="why-title">Built to <span class="text-flame">Cut Harder</span>. Built to Last.</h2>
+      <p>From single torches to full CNC installations, we supply equipment that fabrication shops, shipyards and steel plants depend on every shift.</p>
+    </div>
+    <div class="features">
+      <article class="feature reveal">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l8 4v6c0 5-3.5 8.5-8 10-4.5-1.5-8-5-8-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+        <h3>Quality Materials</h3>
+        <p>Forged brass, copper alloy tips and high-grade steel bodies, tested for precision and durability.</p>
+      </article>
+      <article class="feature reveal" data-delay="1">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="6"/><path d="M8.2 13.2L7 22l5-3 5 3-1.2-8.8"/></svg></div>
+        <h3>Safety Certified</h3>
+        <p>Every product meets ISO and BIS safety standards, and every installation is done to code.</p>
+      </article>
+      <article class="feature reveal" data-delay="2">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M1 3h15v13H1z"/><path d="M16 8h4l3 3v5h-7z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3>Fast Delivery</h3>
+        <p>Large ready stock and a nationwide logistics network for dispatch within 24–48 hours.</p>
+      </article>
+      <article class="feature reveal" data-delay="3">
+        <div class="feature-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></svg></div>
+        <h3>Expert Support</h3>
+        <p>Engineers help with selection, installation, operator training and after-sales service.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     2. PRODUCTS
+     ========================================================= -->
+<section class="section angle-both metal" id="products" aria-labelledby="products-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Our Products</span>
+      <h2 id="products-title">Our Products <span class="text-flame">&amp; Solutions</span></h2>
+      <p>Gas cutting torches and machines, plus ventilation and roofing solutions for factories, sheds and warehouses.</p>
+    </div>
+
+    <div class="filters reveal" role="group" aria-label="Filter products by category">
+      <button class="filter-btn" data-filter="all" aria-pressed="true">All</button>
+      <button class="filter-btn" data-filter="machines" aria-pressed="false">Machines</button>
+      <button class="filter-btn" data-filter="ventilation" aria-pressed="false">Ventilation</button>
+      <button class="filter-btn" data-filter="roofing" aria-pressed="false">Roofing</button>
+    </div>
+
+    <!-- REPLACE: each product's img src, name, description and specs. -->
+    <div class="product-grid" id="productGrid" aria-live="polite">
+
+
+
+      <article class="product reveal" data-category="machines" data-delay="2">
+        <div class="product-media"><span class="product-tag">Machines</span>
+          <img src="images/portable-machine.svg" alt="Portable gas cutting machine on track" loading="lazy" decoding="async" width="800" height="550"></div>
+        <div class="product-body">
+          <h3>Portable Gas Cutting Machine</h3>
+          <p class="product-desc">Lightweight track-mounted cutter for straight, bevel and circle cuts on site.</p>
+          <ul class="specs"><li><span>Cutting</span><span>5 – 100 mm</span></li><li><span>Speed</span><span>50 – 750 mm/min</span></li><li><span>Bevel</span><span>0 – 45°</span></li></ul>
+          <button class="btn btn-primary btn-sm" data-enquire="Gas Cutting Machines (Portable)">Enquire</button>
+        </div>
+      </article>
+
+      <article class="product reveal" data-category="machines">
+        <div class="product-media"><span class="product-tag">Machines</span>
+          <img src="images/cnc-machine.svg" alt="CNC gantry gas and plasma cutting machine" loading="lazy" decoding="async" width="800" height="550"></div>
+        <div class="product-body">
+          <h3>CNC Gas Cutting Machine</h3>
+          <p class="product-desc">Gantry-type CNC oxy-fuel / plasma cutter for high-volume profile cutting of steel plates.</p>
+          <ul class="specs"><li><span>Bed</span><span>1.5 × 3 m – 4 × 12 m</span></li><li><span>Cutting</span><span>6 – 200 mm</span></li><li><span>Accuracy</span><span>± 0.5 mm</span></li></ul>
+          <button class="btn btn-primary btn-sm" data-enquire="Gas Cutting Machines (CNC)">Enquire</button>
+        </div>
+      </article>
+
+      <!-- REPLACE: check the specs below against your real product range -->
+      <article class="product reveal" data-category="ventilation" data-delay="1">
+        <div class="product-media"><span class="product-tag">Ventilation</span>
+          <img src="images/turbo-ventilator.svg" alt="Stainless steel turbo ventilator on a metal roof" loading="lazy" decoding="async" width="800" height="550"></div>
+        <div class="product-body">
+          <h3>Turbo Ventilator</h3>
+          <p class="product-desc">Improve ventilation, reduce heat and enhance energy efficiency.</p>
+          <ul class="specs"><li><span>Power</span><span>Wind-driven, no electricity</span></li><li><span>Material</span><span>Stainless steel / Aluminium</span></li><li><span>Use</span><span>Factories, sheds, warehouses</span></li></ul>
+          <button class="btn btn-primary btn-sm" data-enquire="Turbo Ventilator">Enquire</button>
+        </div>
+      </article>
+
+      <article class="product reveal" data-category="roofing" data-delay="2">
+        <div class="product-media"><span class="product-tag">Roofing</span>
+          <img src="images/roof-sheet.svg" alt="Blue and white corrugated roofing sheets being installed" loading="lazy" decoding="async" width="800" height="550"></div>
+        <div class="product-body">
+          <h3>Roof Sheet Installation</h3>
+          <p class="product-desc">Expert installation of all types of roofing sheets with precision and quality.</p>
+          <ul class="specs"><li><span>Sheets</span><span>Metal / Polycarbonate / FRP</span></li><li><span>Service</span><span>New roofs &amp; replacement</span></li><li><span>Use</span><span>Industrial &amp; commercial</span></li></ul>
+          <button class="btn btn-primary btn-sm" data-enquire="Roof Sheet Installation">Enquire</button>
+        </div>
+      </article>
+
+      <article class="product reveal" data-category="ventilation">
+        <div class="product-media"><span class="product-tag">Ventilation</span>
+          <img src="images/louver-vent.svg" alt="Metal louver vent on a blue shed wall" loading="lazy" decoding="async" width="800" height="550"></div>
+        <div class="product-body">
+          <h3>Shed Louver Vent</h3>
+          <p class="product-desc">Enhances natural ventilation and keeps your shed cool and comfortable.</p>
+          <ul class="specs"><li><span>Type</span><span>Fixed-blade wall louver</span></li><li><span>Finish</span><span>Galvanised / Powder-coated</span></li><li><span>Sizes</span><span>Made to order</span></li></ul>
+          <button class="btn btn-primary btn-sm" data-enquire="Shed Louver Vent">Enquire</button>
+        </div>
+      </article>
+
+      <article class="product reveal" data-category="ventilation" data-delay="1">
+        <div class="product-media"><span class="product-tag">Ventilation</span>
+          <img src="images/ridge-ventilator.svg" alt="Continuous ridge ventilator along a metal roof" loading="lazy" decoding="async" width="800" height="550"></div>
+        <div class="product-body">
+          <h3>Ridge Ventilator</h3>
+          <p class="product-desc">Continuous ridge ventilation for better airflow and heat exhaust.</p>
+          <ul class="specs"><li><span>Type</span><span>Continuous ridge vent</span></li><li><span>Power</span><span>Natural, no electricity</span></li><li><span>Fit</span><span>Metal sheet roofs</span></li></ul>
+          <button class="btn btn-primary btn-sm" data-enquire="Ridge Ventilator">Enquire</button>
+        </div>
+      </article>
+
+      <article class="product reveal" data-category="ventilation" data-delay="2">
+        <div class="product-media"><span class="product-tag">Ventilation</span>
+          <img src="images/electric-ventilator.svg" alt="Wall-mounted electric exhaust fan ventilator" loading="lazy" decoding="async" width="800" height="550"></div>
+        <div class="product-body">
+          <h3>Electric Ventilators</h3>
+          <p class="product-desc">Powerful and reliable ventilation for industrial and commercial applications.</p>
+          <ul class="specs"><li><span>Type</span><span>Wall / roof exhaust fans</span></li><li><span>Power</span><span>Single / three phase</span></li><li><span>Use</span><span>Industrial &amp; commercial</span></li></ul>
+          <button class="btn btn-primary btn-sm" data-enquire="Electric Ventilators">Enquire</button>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     3. CATALOG
+     ========================================================= -->
+<section class="section" id="catalog" aria-labelledby="catalog-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Product Catalog</span>
+      <h2 id="catalog-title">Series &amp; <span class="text-flame">Specifications</span></h2>
+      <p>Browse our product series by model number, or download the full technical catalog.</p>
+    </div>
+
+    <div class="catalog-banner reveal">
+      <svg class="catalog-icon" viewBox="0 0 84 100" aria-hidden="true">
+        <path d="M6 4h52l20 20v72H6z" fill="#1d2024" stroke="#ff6a1a" stroke-width="2.5"/>
+        <path d="M58 4v20h20" fill="none" stroke="#ff6a1a" stroke-width="2.5"/>
+        <rect x="16" y="52" width="52" height="22" rx="3" fill="#ff6a1a"/>
+        <text x="42" y="68" text-anchor="middle" font-family="Barlow Condensed,Arial" font-weight="800" font-size="15" fill="#140800">PDF</text>
+        <path d="M18 34h34M18 42h24" stroke="#8b939c" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <div>
+        <h3>Download Full Catalog</h3>
+        <p>Every product, model number, dimension and spec in one PDF.</p>
+        <div class="catalog-meta"><span><b>Edition</b> 2026</span><span><b>Pages</b> 48</span><span><b>Size</b> 12 MB</span></div>
+      </div>
+      <!-- REPLACE: put your catalog PDF next to this file and name it catalog.pdf (or change href) -->
+      <a href="catalog.pdf" class="btn btn-primary" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M12 3v13M6 11l6 6 6-6M4 21h16"/></svg>
+        Download PDF</a>
+    </div>
+
+    <div class="catalog-layout">
+      <div class="reveal">
+        <h3 class="subhead">Product Series</h3>
+        <!-- REPLACE: series names & model numbers -->
+        <div class="accordion" id="accordion">
+          <div class="acc-item">
+            <button class="acc-trigger" aria-expanded="false" aria-controls="acc3" id="acc3-btn"><span class="t">Ventilation Series</span><span class="c">4 models</span><span class="chev"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2"/></svg></span></button>
+            <div class="acc-panel" id="acc3" role="region" aria-labelledby="acc3-btn"><div><ul>
+              <li>Turbo Ventilator <code>YC-V-TB</code></li>
+              <li>Shed Louver Vent <code>YC-V-LV</code></li>
+              <li>Ridge Ventilator <code>YC-V-RG</code></li>
+              <li>Electric Ventilator <code>YC-V-EL</code></li>
+            </ul></div></div>
+          </div>
+          <div class="acc-item">
+            <button class="acc-trigger" aria-expanded="false" aria-controls="acc5" id="acc5-btn"><span class="t">Roofing Solutions</span><span class="c">3 services</span><span class="chev"><svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2"/></svg></span></button>
+            <div class="acc-panel" id="acc5" role="region" aria-labelledby="acc5-btn"><div><ul>
+              <li>Metal Roof Sheet Installation <code>YC-RS-M</code></li>
+              <li>Polycarbonate / FRP Sheet Installation <code>YC-RS-P</code></li>
+              <li>Roof Sheet Replacement <code>YC-RS-R</code></li>
+            </ul></div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reveal" data-delay="1">
+        <h3 class="subhead">Technical Specifications</h3>
+        <div class="spec-tabs" role="tablist" aria-label="Specification category">
+          <button class="filter-btn" role="tab" id="tab-gas" aria-controls="spec-gas" aria-selected="true">Gas Cutting</button>
+          <button class="filter-btn" role="tab" id="tab-vent" aria-controls="spec-vent" aria-selected="false" tabindex="-1">Ventilation</button>
+          <button class="filter-btn" role="tab" id="tab-turbo" aria-controls="spec-turbo" aria-selected="false" tabindex="-1">Turbo Ventilators</button>
+        </div>
+
+        <!-- REPLACE: spec rows (gas cutting) -->
+        <div class="table-wrap" id="spec-gas" role="tabpanel" aria-labelledby="tab-gas" tabindex="0">
+          <table>
+            <caption>Specifications are indicative. Contact us for application-specific data.</caption>
+            <thead><tr><th scope="col">Model</th><th scope="col">Gas Type</th><th scope="col">Cutting Thickness</th><th scope="col">Pressure</th><th scope="col">Price</th></tr></thead>
+            <tbody>
+              <tr><td>YC-T80L</td><td>Oxy-LPG</td><td>8 – 60 mm</td><td>2 – 7 bar O₂</td><td><span class="por">On Request</span></td></tr>
+              <tr><td>YC-MT22</td><td>Oxy-Acetylene / LPG</td><td>8 – 60 mm</td><td>3 – 8 bar O₂</td><td><span class="por">On Request</span></td></tr>
+              <tr><td>YC-PM30</td><td>Oxy-Acetylene / LPG</td><td>8 – 60 mm</td><td>3 – 7 bar O₂</td><td><span class="por">On Request</span></td></tr>
+              <tr><td>YC-CNC-1530</td><td>Oxy-Fuel / Plasma</td><td>3 – 10 mm</td><td>4 – 10 bar O₂</td><td><span class="por">On Request</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- REPLACE: spec rows (ventilation) — placeholder values, check against your range -->
+        <div class="table-wrap" id="spec-vent" role="tabpanel" aria-labelledby="tab-vent" tabindex="0" hidden>
+          <table>
+            <caption>Sizes made to order. Contact us for site-specific recommendations.</caption>
+            <thead><tr><th scope="col">Model</th><th scope="col">Product</th><th scope="col">Size</th><th scope="col">Material</th><th scope="col">Power</th><th scope="col">Price</th></tr></thead>
+            <tbody>
+              <tr><td>YC-V-LV</td><td>Shed Louver Vent</td><td>Customized size</td><td>GI / PPGL</td><td>Natural</td><td><span class="por">On Request</span></td></tr>
+              <tr><td>YC-V-RG</td><td>Ridge Ventilator</td><td>Per running metre</td><td>GI / PPGL</td><td>Natural</td><td><span class="por">On Request</span></td></tr>
+              <tr><td>YC-V-EL</td><td>Electric Ventilator</td><td>12" – 18" sweep</td><td>MS body, Al blades</td><td>230 V / 415 V</td><td><span class="por">On Request</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <!-- REPLACE: spec rows (turbo ventilators) — placeholder values, check against your range -->
+        <div class="table-wrap" id="spec-turbo" role="tabpanel" aria-labelledby="tab-turbo" tabindex="0" hidden>
+          <table>
+            <caption>Wind-driven, no electricity required. Contact us for roof-area sizing.</caption>
+            <thead><tr><th scope="col">Model</th><th scope="col">Throat Size</th><th scope="col">Material</th><th scope="col">Bearing</th><th scope="col">Power</th><th scope="col">Price</th></tr></thead>
+            <tbody>
+              <tr><td>YC-V-TB21</td><td>21" (530 mm)</td><td>SS / Aluminium</td><td>Double ball bearing</td><td>Wind-driven</td><td><span class="por">On Request</span></td></tr>
+              <tr><td>YC-V-TB24</td><td>24" (600 mm)</td><td>SS / Aluminium</td><td>Double ball bearing</td><td>Wind-driven</td><td><span class="por">On Request</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     4. CONTACT
+     ========================================================= -->
+<section class="section angle-top metal" id="contact" aria-labelledby="contact-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Get in Touch</span>
+      <h2 id="contact-title">Request a <span class="text-flame">Quote</span></h2>
+      <p>Tell us what you need. Our team usually replies within one business day.</p>
+    </div>
+
+    <div class="contact-grid">
+      <!-- Details -->
+      <aside class="card reveal" aria-label="Company contact details">
+        <!-- REPLACE: all contact details below -->
+        <ul class="info-list">
+          <li><span class="info-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+            <div><h4>Address</h4><a href="https://maps.app.goo.gl/HStCFHHKTVJuSprA6" target="_blank" rel="noopener">Plot No. 29A, Eswaran Kovil Street,<br>Irugur, Coimbatore – 641103.</a></div></li>
+          <li><span class="info-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
+            <div><h4>Phone</h4><a href="tel:+919677558464">+91 96775 58464</a></div></li>
+          <li><span class="info-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 6l-10 7L2 6"/></svg></span>
+            <div><h4>Email</h4><a href="mailto:info@C4group.co.in">info@C4group.co.in</a></div></li>
+          <li><span class="info-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+            <div style="flex:1"><h4>Business Hours</h4>
+              <table class="hours"><tbody>
+                <tr><td>Mon – Fri</td><td>9:00 AM – 7:00 PM</td></tr>
+                <tr><td>Saturday</td><td>9:00 AM – 2:00 PM</td></tr>
+                <tr><td>Sunday</td><td>Closed</td></tr>
+              </tbody></table></div></li>
+        </ul>
+        <a class="btn btn-wa" id="waBtn" href="https://wa.me/919677558464?text=Hello%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 0 1 2.2 12C2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.8-9.8 9.8zM20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.7c1.7.9 3.7 1.4 5.7 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.3z"/></svg>
+          Chat on WhatsApp</a>
+      </aside>
+
+      <!-- REPLACE: Google Maps → Share → Embed a map → copy the iframe src here -->
+      <div class="map reveal" data-delay="1">
+        <iframe title="Our location on Google Maps" src="https://www.google.com/maps?q=11.018699,77.065673&z=17&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- =========================================================
+     FOOTER
+     ========================================================= -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="#home" class="logo" aria-label="C4 Engineering Co home">
+          <svg class="logo-mark" viewBox="0 0 40 40" aria-hidden="true"><path d="M4 10 L20 2 L36 10 V30 L20 38 L4 30 Z" fill="none" stroke="#8b939c" stroke-width="2"/><path d="M20 8c3 7 9 10 9 18a9 9 0 0 1-18 0c0-4.5 2.5-7 4-9.5.6 3 2 4.5 3.2 5-.6-5 .6-9.6 1.8-13.5z" fill="url(#lg)"/></svg>
+          C4<span>Engineering Co</span>
+        </a>
+        <p class="footer-blurb">C4 Engineering Co is a trusted name in Engineering, Fabrication and Roofing Solutions. We deliver high-quality, durable and cost-effective solutions tailored to industrial and commercial needs with professionalism and timely execution.</p>
+        <!-- REPLACE: social links -->
+        <div class="socials">
+          <a href="https://www.facebook.com/profile.php?id=100087350510761" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 8V6c0-1 .5-1.5 1.5-1.5H17V1h-2.6C11.5 1 10.5 3 10.5 5.6V8H8v3.5h2.5V23H14V11.5h2.7L17 8z"/></svg></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.5h4V21H3zM9.5 9.5h3.8v1.6h.1c.5-1 1.8-2 3.8-2 4 0 4.8 2.6 4.8 6V21h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2 1.4-2 2.8V21h-4z"/></svg></a>
+          <a href="#" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+          <a href="https://www.youtube.com/@C4EngineeringCo" target="_blank" rel="noopener" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#catalog">Catalog</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="catalog.pdf" target="_blank" rel="noopener">Download Catalog</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Products</h4>
+        <ul>
+          <li><a href="#products" data-filter-link="machines">Cutting Machines</a></li>
+          <li><a href="#products" data-filter-link="ventilation">Ventilators</a></li>
+          <li><a href="#products" data-filter-link="roofing">Roof Sheet Installation</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Reach Us</h4>
+        <ul>
+          <li><a href="tel:+919677558464">+91 96775 58464</a></li>
+          <li><a href="mailto:info@C4group.co.in">info@C4group.co.in</a></li>
+          <li style="color:var(--text-dim)">Plot No. 29A, Eswaran Kovil Street, Irugur, Coimbatore – 641103.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="year">2026</span> C4 Engineering Co. All rights reserved.</span>
+      <span>GSTIN: 33AZNPR3565P1ZI</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Floating buttons: visible on all screens. REPLACE phone numbers. -->
+<div class="fab-stack">
+  <button class="to-top" id="toTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg></button>
+  <a class="fab fab-call" href="tel:+919677558464" aria-label="Call us"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></a>
+  <a class="fab fab-wa" href="https://wa.me/919677558464?text=Hello%2C%20I%27d%20like%20a%20quote." target="_blank" rel="noopener" aria-label="Chat on WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1-.2.3-.8 1-.9 1.2-.2.2-.3.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.4-.5c.2-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5 2.5 1 3 .8 3.6.7.6-.1 1.8-.7 2-1.4.3-.7.3-1.3.2-1.4-.1-.2-.3-.3-.6-.4zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.8 9.8 0 0 1 2.2 12C2.2 6.6 6.6 2.2 12 2.2c2.6 0 5.1 1 6.9 2.9a9.7 9.7 0 0 1 2.9 6.9c0 5.4-4.4 9.8-9.8 9.8zM20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.3.1 11.9c0 2.1.6 4.1 1.6 5.9L0 24l6.3-1.7c1.7.9 3.7 1.4 5.7 1.4 6.6 0 11.9-5.3 11.9-11.9 0-3.2-1.2-6.2-3.4-8.3z"/></svg></a>
+</div>
+
+<script>
+(function(){
+  "use strict";
+  document.body.classList.remove("no-js");
+  var reduceMotion = window.matchMedia ("(prefers-reduced-motion: reduce)").matches;
+  var $ = function(s,c){return (c||document).querySelector(s)};
+  var $$ = function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+
+  /* ---------- Year ---------- */
+  $("#year").textContent = new Date().getFullYear();
+
+  /* ---------- Sticky header shrink + back-to-top ---------- */
+  var header = $("#header"), toTop = $("#toTop");
+  function onScroll(){
+    var y = window.scrollY;
+    header.classList.toggle("scrolled", y > 40);
+    toTop.classList.toggle("show", y > 700);
+  }
+  window.addEventListener("scroll", onScroll, {passive:true});
+  onScroll();
+  toTop.addEventListener("click", function(){ window.scrollTo({top:0, behavior: reduceMotion ? "auto" : "smooth"}); });
+
+  /* ---------- Mobile menu ---------- */
+  var burger = $("#hamburger"), links = $("#navLinks"), backdrop = $("#navBackdrop");
+  function setMenu(open){
+    burger.setAttribute("aria-expanded", open);
+    burger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    links.classList.toggle("open", open);
+    backdrop.classList.toggle("show", open);
+    document.body.style.overflow = open ? "hidden" : "";
+  }
+  burger.addEventListener("click", function(){ setMenu(burger.getAttribute("aria-expanded") !== "true"); });
+  backdrop.addEventListener("click", function(){ setMenu(false); });
+  $$("a", links).forEach(function(a){ a.addEventListener("click", function(){ setMenu(false); }); });
+  document.addEventListener("keydown", function(e){ if(e.key === "Escape") setMenu(false); });
+
+  /* ---------- Active nav link on scroll ---------- */
+  var navMap = {};
+  $$(".nav-links a[href^='#']:not(.btn)").forEach(function(a){ navMap[a.getAttribute("href").slice(1)] = a; });
+  if ("IntersectionObserver" in window){
+    var secObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if(en.isIntersecting && navMap[en.target.id]){
+          Object.keys(navMap).forEach(function(k){ navMap[k].classList.remove("active"); });
+          navMap[en.target.id].classList.add("active");
+        }
+      });
+    }, {rootMargin:"-45% 0px -50% 0px"});
+    Object.keys(navMap).forEach(function(id){ var s = document.getElementById(id); if(s) secObs.observe(s); });
+  }
+
+  /* ---------- Scroll reveal ---------- */
+  var reveals = $$(".reveal");
+  if ("IntersectionObserver" in window && !reduceMotion){
+    var rObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ en.target.classList.add("in"); rObs.unobserve(en.target); } });
+    }, {threshold:.12, rootMargin:"0px 0px -40px 0px"});
+    reveals.forEach(function(el){ rObs.observe(el); });
+  } else { reveals.forEach(function(el){ el.classList.add("in"); }); }
+
+  /* ---------- Animated counters ---------- */
+  function animateCounter(el){
+    var target = +el.dataset.target, dur = 1800, start = null;
+    function fmt(n){ return n.toLocaleString("en-IN"); } // Indian grouping: 1,00,000
+    if(reduceMotion){ el.textContent = fmt(target); return; }
+    function step(ts){
+      if(!start) start = ts;
+      var p = Math.min((ts - start) / dur, 1), eased = 1 - Math.pow(1 - p, 3);
+      el.textContent = fmt(Math.round(target * eased));
+      if(p < 1) requestAnimationFrame(step);
+    }
+    requestAnimationFrame(step);
+  }
+  var counters = $$(".counter");
+  if ("IntersectionObserver" in window){
+    var cObs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting){ animateCounter(en.target); cObs.unobserve(en.target); } });
+    }, {threshold:.6});
+    counters.forEach(function(c){ cObs.observe(c); });
+  } else { counters.forEach(animateCounter); }
+
+  /* ---------- Product filter ---------- */
+  var filterBtns = $$(".filters .filter-btn"), products = $$(".product");
+  function applyFilter(cat){
+    filterBtns.forEach(function(b){ b.setAttribute("aria-pressed", b.dataset.filter === cat); });
+    products.forEach(function(p){
+      var show = cat === "all" || p.dataset.category === cat;
+      p.classList.toggle("hide", !show);
+      p.classList.remove("fade-in");
+      if(show){ p.classList.add("in"); void p.offsetWidth; p.classList.add("fade-in"); }
+    });
+  }
+  filterBtns.forEach(function(b){ b.addEventListener("click", function(){ applyFilter(b.dataset.filter); }); });
+  $$("[data-filter-link]").forEach(function(a){ a.addEventListener("click", function(){ applyFilter(a.dataset.filterLink); }); });
+
+  /* ---------- Enquire → scroll to contact, prefill WhatsApp message ---------- */
+  var waBtn = $("#waBtn"), waBase = waBtn ? waBtn.href.split("?")[0] : "";
+  $$("[data-enquire]").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      if(waBtn) waBtn.href = waBase + "?text=" + encodeURIComponent("Hello, I'd like a quote for " + btn.dataset.enquire + ".");
+      document.getElementById("contact").scrollIntoView({behavior: reduceMotion ? "auto" : "smooth"});
+      if(waBtn) setTimeout(function(){ waBtn.focus({preventScroll:true}); }, 700);
+    });
+  });
+
+  /* ---------- Specification tabs ---------- */
+  var specTabs = $$('.spec-tabs [role="tab"]');
+  function selectSpec(tab, focus){
+    specTabs.forEach(function(t){
+      var on = t === tab;
+      t.setAttribute("aria-selected", on);
+      t.tabIndex = on ? 0 : -1;
+      document.getElementById(t.getAttribute("aria-controls")).hidden = !on;
+    });
+    if(focus) tab.focus();
+  }
+  specTabs.forEach(function(t, i){
+    t.addEventListener("click", function(){ selectSpec(t); });
+    t.addEventListener("keydown", function(e){
+      var n = e.key === "ArrowRight" ? 1 : e.key === "ArrowLeft" ? -1 : 0;
+      if(n){ e.preventDefault(); selectSpec(specTabs[(i + n + specTabs.length) % specTabs.length], true); }
+    });
+  });
+
+  /* ---------- Accordion ---------- */
+  $$(".acc-trigger").forEach(function(t){
+    t.addEventListener("click", function(){
+      var item = t.parentElement, open = !item.classList.contains("open");
+      item.classList.toggle("open", open);
+      t.setAttribute("aria-expanded", open);
+    });
+  });
+
+  /* ---------- Hero spark particles ---------- */
+  var canvas = $("#sparks");
+  if(canvas && !reduceMotion){
+    var ctx = canvas.getContext("2d"), sparks = [], W, H, dpr = Math.min(window.devicePixelRatio || 1, 2), running = true;
+    function resize(){
+      W = canvas.clientWidth; H = canvas.clientHeight;
+      canvas.width = W * dpr; canvas.height = H * dpr; ctx.setTransform(dpr,0,0,dpr,0,0);
+    }
+    resize(); window.addEventListener("resize", resize);
+    function origin(){ return { x: W * (W < 768 ? .7 : .76), y: H * .62 }; }
+    function spawn(){
+      var o = origin(), a = -Math.PI/2 + (Math.random() - .5) * Math.PI * 1.5, s = 2 + Math.random() * 6;
+      sparks.push({ x:o.x, y:o.y, vx:Math.cos(a)*s + (Math.random()-.5), vy:Math.sin(a)*s, life:1, decay:.008 + Math.random()*.018, size:.8 + Math.random()*1.8 });
+    }
+    var density = W < 768 ? 2 : 4;
+    function frame(){
+      if(!running) return;
+      ctx.globalCompositeOperation = "source-over";
+      ctx.clearRect(0,0,W,H);
+      ctx.globalCompositeOperation = "lighter";
+      var o = origin(), g = ctx.createRadialGradient(o.x,o.y,0,o.x,o.y,90);
+      g.addColorStop(0,"rgba(255,220,150,.55)"); g.addColorStop(.3,"rgba(255,120,30,.25)"); g.addColorStop(1,"rgba(255,80,0,0)");
+      ctx.fillStyle = g; ctx.beginPath(); ctx.arc(o.x,o.y,90,0,Math.PI*2); ctx.fill();
+      for(var i=0;i<density;i++) spawn();
+      for(var j=sparks.length-1;j>=0;j--){
+        var p = sparks[j];
+        p.vy += .12; p.vx *= .99; p.x += p.vx; p.y += p.vy; p.life -= p.decay;
+        if(p.life <= 0 || p.y > H + 20){ sparks.splice(j,1); continue; }
+        var hue = 25 + p.life * 25;
+        ctx.strokeStyle = "hsla(" + hue + ",100%," + (55 + p.life*30) + "%," + p.life + ")";
+        ctx.lineWidth = p.size; ctx.lineCap = "round";
+        ctx.beginPath(); ctx.moveTo(p.x, p.y); ctx.lineTo(p.x - p.vx*2.2, p.y - p.vy*2.2); ctx.stroke();
+      }
+      requestAnimationFrame(frame);
+    }
+    // Pause when hero is off-screen to save battery
+    if("IntersectionObserver" in window){
+      new IntersectionObserver(function(en){
+        var vis = en[0].isIntersecting;
+        if(vis && !running){ running = true; requestAnimationFrame(frame); }
+        else if(!vis){ running = false; }
+      }).observe(canvas);
+    }
+    requestAnimationFrame(frame);
+  }
+})();
+</script>
 </body>
 </html>

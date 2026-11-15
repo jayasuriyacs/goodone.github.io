@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#101114"/><stop offset="1" stop-color="#1a1c20"/></linearGradient>
+  <radialGradient id="glow" cx="1350" cy="830" r="900" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff7a1f" stop-opacity=".55"/><stop offset=".35" stop-color="#ff4d0d" stop-opacity=".18"/><stop offset="1" stop-color="#ff4d0d" stop-opacity="0"/></radialGradient>
+  <radialGradient id="hot" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#fffbe6"/><stop offset=".25" stop-color="#ffd36a"/><stop offset=".6" stop-color="#ff6a1a" stop-opacity=".6"/><stop offset="1" stop-color="#ff4d0d" stop-opacity="0"/></radialGradient>
+  <linearGradient id="plate" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3a3f46"/><stop offset="1" stop-color="#1c1f23"/></linearGradient>
+  <linearGradient id="plateSheen" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#000" stop-opacity=".5"/><stop offset=".7" stop-color="#ff6a1a" stop-opacity=".18"/><stop offset="1" stop-color="#000" stop-opacity=".2"/></linearGradient>
+  <linearGradient id="kerf" x1="300" y1="0" x2="1350" y2="0" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#3a0d05" stop-opacity="0"/><stop offset=".5" stop-color="#9c2a08"/><stop offset=".85" stop-color="#ff5a12"/><stop offset="1" stop-color="#fff1b0"/></linearGradient>
+  <linearGradient id="brass" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#f3d27a"/><stop offset=".5" stop-color="#c9962e"/><stop offset="1" stop-color="#6e4b10"/></linearGradient>
+  <linearGradient id="copper" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#7a3416"/><stop offset=".4" stop-color="#f0a070"/><stop offset="1" stop-color="#8a3c18"/></linearGradient>
+  <linearGradient id="rib" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#16295a"/><stop offset=".35" stop-color="#4a76c9"/><stop offset=".6" stop-color="#22479c"/><stop offset="1" stop-color="#16295a"/></linearGradient>
+  <pattern id="roof" width="28" height="10" patternUnits="userSpaceOnUse" patternTransform="skewX(-30.5)"><rect width="28" height="10" fill="url(#rib)"/></pattern>
+  <linearGradient id="roofShade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#0b0c0e" stop-opacity=".75"/><stop offset=".45" stop-color="#0b0c0e" stop-opacity=".35"/><stop offset="1" stop-color="#ff6a1a" stop-opacity=".12"/></linearGradient>
+  <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#1b1f25"/><stop offset="1" stop-color="#121418"/></linearGradient>
+  <linearGradient id="tsteel" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6b737c"/><stop offset=".35" stop-color="#ffffff"/><stop offset=".65" stop-color="#b8c0c8"/><stop offset="1" stop-color="#5a6068"/></linearGradient>
+  <g id="turbo">
+    <ellipse cx="0" cy="0" rx="36" ry="8" fill="#5a6068"/>
+    <rect x="-22" y="-30" width="44" height="30" fill="url(#tsteel)"/>
+    <rect x="-26" y="-36" width="52" height="8" rx="2" fill="url(#tsteel)"/>
+    <path d="M-28 -36 C-28 -84 28 -84 28 -36 Z" fill="url(#tsteel)"/>
+    <g fill="none" stroke="#3a3f45" stroke-width="1.6" opacity=".8"><path d="M-24 -36 Q-4 -60 0 -72M-14 -36 Q3 -60 0 -72M-4 -36 Q10 -60 0 -72M6 -36 Q17 -60 0 -72M16 -36 Q24 -58 2 -71"/></g>
+    <ellipse cx="0" cy="-72" rx="7" ry="3" fill="#c4cad1"/>
+  </g>
+  <g id="louver">
+    <rect width="90" height="56" fill="#8b939c"/>
+    <rect x="6" y="6" width="78" height="44" fill="#0b0c0e"/>
+    <path d="M6 12H84M6 20H84M6 28H84M6 36H84M6 44H84" stroke="#aab2ba" stroke-width="4"/>
+  </g>
+  <filter id="blur" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+  <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="3"/></filter>
+</defs>
+<rect width="1920" height="1080" fill="url(#bg)"/>
+<!-- background: industrial shed with roof installation + ventilation -->
+<g>
+  <!-- wall with louver vents -->
+  <path d="M700 470 L1920 410 L1920 720 L700 770 Z" fill="url(#wall)"/>
+  <use href="#louver" transform="translate(1040 500)" opacity=".7"/>
+  <use href="#louver" transform="translate(1330 486)" opacity=".7"/>
+  <use href="#louver" transform="translate(1620 472)" opacity=".7"/>
+  <!-- sheeted roof -->
+  <path d="M1000 287.5 L1920 230 L1920 410 L900 460 Z" fill="url(#roof)"/>
+  <path d="M1000 287.5 L1920 230 L1920 410 L900 460 Z" fill="url(#roofShade)"/>
+  <path d="M700 470 L1920 410" stroke="#ff8a3a" stroke-opacity=".35" stroke-width="3"/>
+  <!-- bare roof section: rafters + purlins awaiting sheets -->
+  <g stroke="#6b737c" stroke-linecap="round" opacity=".75">
+    <path d="M800 300 L700 470M900 294 L800 465M1000 287.5 L900 460" stroke-width="7"/>
+    <path d="M785 325.5 L985 313M762 364.6 L962 353M738 405.4 L938 394.5M715 444.5 L915 434" stroke-width="5"/>
+  </g>
+  <!-- sheet being hoisted into place -->
+  <path d="M955 0 V180" stroke="#5a6068" stroke-width="2"/>
+  <path d="M955 180 L860 205M955 180 L1010 196" stroke="#5a6068" stroke-width="2"/>
+  <g transform="translate(820 200) rotate(-4)">
+    <path d="M40 0 L230 -10 L190 62 L0 72 Z" fill="url(#roof)"/>
+    <path d="M40 0 L230 -10 L190 62 L0 72 Z" fill="#0b0c0e" opacity=".35"/>
+  </g>
+  <!-- ridge cap + ridge ventilator -->
+  <path d="M800 300 L1920 230" stroke="#8b939c" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1080 278 L1380 259 L1380 247 L1080 266 Z" fill="#aab2ba"/>
+  <path d="M1086 281 L1374 263" stroke="#0b0c0e" stroke-width="5" stroke-dasharray="18 8"/>
+  <!-- turbo ventilators -->
+  <use href="#turbo" transform="translate(1250 305) scale(1.05)"/>
+  <use href="#turbo" transform="translate(1530 288) scale(1.05)"/>
+  <use href="#turbo" transform="translate(1790 271) scale(1.05)"/>
+</g>
+<rect width="1920" height="1080" fill="url(#glow)"/>
+<!-- smoke -->
+<g filter="url(#blur)" fill="#8b939c">
+  <ellipse cx="1300" cy="560" rx="260" ry="140" opacity=".10"/>
+  <ellipse cx="1120" cy="420" rx="320" ry="120" opacity=".07"/>
+  <ellipse cx="1480" cy="380" rx="240" ry="110" opacity=".06"/>
+</g>
+<!-- steel plate -->
+<path d="M0 820 L1920 700 L1920 1080 L0 1080 Z" fill="url(#plate)"/>
+<path d="M0 820 L1920 700 L1920 1080 L0 1080 Z" fill="url(#plateSheen)"/>
+<path d="M0 820 L1920 700" stroke="#8b939c" stroke-opacity=".5" stroke-width="3"/>
+<!-- kerf -->
+<path d="M300 925 L1350 838" stroke="#ff6a1a" stroke-width="22" stroke-opacity=".25" filter="url(#soft)"/>
+<path d="M300 925 L1350 838" stroke="url(#kerf)" stroke-width="7" stroke-linecap="round"/>
+<!-- hot spot -->
+<ellipse cx="1350" cy="840" rx="300" ry="110" fill="url(#hot)" opacity=".8"/>
+<ellipse cx="1350" cy="840" rx="90" ry="30" fill="url(#hot)"/>
+<!-- torch -->
+<g>
+  <path d="M1700 420 L1990 210" stroke="#6e4b10" stroke-width="86" stroke-linecap="round"/>
+  <path d="M1700 420 L1990 210" stroke="url(#brass)" stroke-width="74" stroke-linecap="round"/>
+  <g stroke="#7a5514" stroke-width="3" opacity=".55">
+    <path d="M1760 352l28 38M1795 327l28 38M1830 302l28 38M1865 277l28 38M1900 252l28 38"/>
+  </g>
+  <rect x="1655" y="400" width="40" height="70" rx="8" fill="#2b6fd6" transform="rotate(-36 1675 435)"/>
+  <rect x="1700" y="455" width="40" height="60" rx="8" fill="#d33a2c" transform="rotate(-36 1720 485)"/>
+  <g stroke-linecap="round">
+    <path d="M1372 672 L1700 430" stroke="#5a6068" stroke-width="16"/>
+    <path d="M1372 672 L1700 430" stroke="#c4cad1" stroke-width="10"/>
+    <path d="M1362 690 L1712 446" stroke="#5a6068" stroke-width="12"/>
+    <path d="M1362 690 L1712 446" stroke="#aab2ba" stroke-width="7"/>
+    <path d="M1390 640 L1640 455" stroke="#8b939c" stroke-width="10"/>
+  </g>
+  <rect x="1318" y="640" width="68" height="64" rx="12" fill="url(#brass)"/>
+  <rect x="1326" y="700" width="52" height="26" rx="4" fill="url(#brass)"/>
+  <path d="M1332 726 L1372 726 L1364 782 L1340 782 Z" fill="url(#copper)"/>
+</g>
+<!-- flame -->
+<path d="M1338 782 Q1352 860 1366 782 Z" fill="#4aa3ff" opacity=".55"/>
+<path d="M1344 782 Q1352 822 1360 782 Z" fill="#e8f7ff"/>
+<!-- sparks -->
+<g stroke-linecap="round" fill="none">
+  <g stroke="#ffd36a" stroke-width="3">
+    <path d="M1340 838 L1110 760"/><path d="M1345 835 L1180 700"/><path d="M1350 836 L1270 640"/>
+    <path d="M1338 842 L1040 820"/><path d="M1342 845 L1000 900"/><path d="M1348 846 L1150 990"/>
+    <path d="M1360 836 L1460 690"/><path d="M1364 840 L1560 760"/><path d="M1366 846 L1620 880"/>
+    <path d="M1356 850 L1420 1010"/><path d="M1350 850 L1300 1040"/>
+  </g>
+  <g stroke="#ffb020" stroke-width="2">
+    <path d="M1080 742 L1020 722"/><path d="M1150 676 L1110 642"/><path d="M1250 600 L1236 566"/>
+    <path d="M990 818 L930 815"/><path d="M960 912 L900 930"/><path d="M1120 1010 L1080 1040"/>
+    <path d="M1480 662 L1500 632"/><path d="M1590 748 L1640 730"/><path d="M1660 890 L1720 905"/>
+    <path d="M1335 840 L870 700"/><path d="M1340 842 L820 860"/><path d="M1346 848 L1060 1060"/>
+    <path d="M1362 842 L1700 800"/><path d="M1358 834 L1420 560"/>
+  </g>
+  <g stroke="#ff6a1a" stroke-width="2" opacity=".8">
+    <path d="M1338 840 L720 760"/><path d="M1344 846 L760 980"/><path d="M1352 832 L1200 520"/>
+    <path d="M1366 838 L1780 700"/><path d="M1362 848 L1800 960"/>
+  </g>
+  <g fill="#ffd36a" stroke="none">
+    <circle cx="1060" cy="700" r="3"/><circle cx="980" cy="760" r="2.5"/><circle cx="1210" cy="580" r="2.5"/>
+    <circle cx="900" cy="880" r="3"/><circle cx="1520" cy="640" r="2.5"/><circle cx="1700" cy="860" r="3"/>
+    <circle cx="1180" cy="1050" r="2.5"/><circle cx="1600" cy="980" r="2"/><circle cx="820" cy="790" r="2"/>
+  </g>
+</g>
+</svg>

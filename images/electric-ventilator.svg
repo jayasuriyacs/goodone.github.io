@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 550" width="800" height="550">
+<defs>
+  <linearGradient id="rib" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#152a5c"/><stop offset=".35" stop-color="#4f7fd8"/><stop offset=".6" stop-color="#244fb0"/><stop offset="1" stop-color="#152a5c"/></linearGradient>
+  <pattern id="wall" width="46" height="10" patternUnits="userSpaceOnUse"><rect width="46" height="10" fill="url(#rib)"/></pattern>
+  <linearGradient id="shadeWall" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#000" stop-opacity=".15"/><stop offset="1" stop-color="#000" stop-opacity=".6"/></linearGradient>
+  <linearGradient id="frame" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f1f3f5"/><stop offset="1" stop-color="#7b838c"/></linearGradient>
+  <radialGradient id="hole" cx=".5" cy=".5" r=".5"><stop offset="0" stop-color="#1b1e22"/><stop offset="1" stop-color="#050506"/></radialGradient>
+  <linearGradient id="blade" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#6b737c"/><stop offset=".5" stop-color="#d5dade"/><stop offset="1" stop-color="#5a6068"/></linearGradient>
+  <ellipse id="b" cx="0" cy="-62" rx="30" ry="62" fill="url(#blade)"/>
+</defs>
+<rect width="800" height="550" fill="url(#wall)"/>
+<rect width="800" height="550" fill="url(#shadeWall)"/>
+<!-- housing -->
+<rect x="262" y="122" width="300" height="300" rx="14" fill="#000" opacity=".45" transform="translate(10 12)"/>
+<rect x="250" y="110" width="300" height="300" rx="14" fill="url(#frame)"/>
+<circle cx="400" cy="260" r="132" fill="#5a6068"/>
+<circle cx="400" cy="260" r="124" fill="url(#hole)"/>
+<!-- blades -->
+<g transform="translate(400 260) rotate(15)">
+  <use href="#b"/><use href="#b" transform="rotate(72)"/><use href="#b" transform="rotate(144)"/><use href="#b" transform="rotate(216)"/><use href="#b" transform="rotate(288)"/>
+</g>
+<circle cx="400" cy="260" r="30" fill="#2b2f35" stroke="#8b939c" stroke-width="4"/>
+<circle cx="400" cy="260" r="10" fill="#8b939c"/>
+<!-- guard -->
+<g fill="none" stroke="#c4cad1" stroke-width="3" opacity=".9">
+  <circle cx="400" cy="260" r="122"/><circle cx="400" cy="260" r="98"/><circle cx="400" cy="260" r="74"/><circle cx="400" cy="260" r="50"/>
+  <path d="M400 138V230M400 290V382M278 260H370M430 260H522M314 174L379 239M421 281L486 346M486 174L421 239M379 281L314 346"/>
+</g>
+<g fill="#5a6068"><circle cx="270" cy="130" r="6"/><circle cx="530" cy="130" r="6"/><circle cx="270" cy="390" r="6"/><circle cx="530" cy="390" r="6"/></g>
+<!-- motion lines -->
+<g fill="none" stroke="#ff8a3a" stroke-width="4" stroke-linecap="round" opacity=".8">
+  <path d="M580 200 C630 190 660 210 710 200"/><path d="M700 192 L712 200 L700 208"/>
+  <path d="M580 260 C630 250 660 270 710 260"/><path d="M700 252 L712 260 L700 268"/>
+  <path d="M580 320 C630 310 660 330 710 320"/><path d="M700 312 L712 320 L700 328"/>
+</g>
+</svg>
