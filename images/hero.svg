@@ -43,16 +43,17 @@
 </defs>
 <rect width="1920" height="1080" fill="url(#bg)"/>
 <!-- background: industrial shed with roof installation + ventilation -->
-<g>
+<g transform="translate(-240 0)"><!-- shed shifted left so the roof starts under the headline -->
   <!-- wall with louver vents -->
-  <path d="M700 470 L1920 410 L1920 720 L700 770 Z" fill="url(#wall)"/>
+  <path d="M700 470 L2160 398 L2160 760 L700 810 Z" fill="url(#wall)"/>
   <use href="#louver" transform="translate(1040 500)" opacity=".7"/>
   <use href="#louver" transform="translate(1330 486)" opacity=".7"/>
   <use href="#louver" transform="translate(1620 472)" opacity=".7"/>
+  <use href="#louver" transform="translate(1910 458)" opacity=".7"/>
   <!-- sheeted roof -->
-  <path d="M1000 287.5 L1920 230 L1920 410 L900 460 Z" fill="url(#roof)"/>
-  <path d="M1000 287.5 L1920 230 L1920 410 L900 460 Z" fill="url(#roofShade)"/>
-  <path d="M700 470 L1920 410" stroke="#ff8a3a" stroke-opacity=".35" stroke-width="3"/>
+  <path d="M1000 287.5 L2160 215 L2160 398 L900 460 Z" fill="url(#roof)"/>
+  <path d="M1000 287.5 L2160 215 L2160 398 L900 460 Z" fill="url(#roofShade)"/>
+  <path d="M700 470 L2160 398" stroke="#ff8a3a" stroke-opacity=".35" stroke-width="3"/>
   <!-- bare roof section: rafters + purlins awaiting sheets -->
   <g stroke="#6b737c" stroke-linecap="round" opacity=".75">
     <path d="M800 300 L700 470M900 294 L800 465M1000 287.5 L900 460" stroke-width="7"/>
@@ -66,15 +67,15 @@
     <path d="M40 0 L230 -10 L190 62 L0 72 Z" fill="#0b0c0e" opacity=".35"/>
   </g>
   <!-- ridge cap + ridge ventilator -->
-  <path d="M800 300 L1920 230" stroke="#8b939c" stroke-width="8" stroke-linecap="round"/>
+  <path d="M800 300 L2160 215" stroke="#8b939c" stroke-width="8" stroke-linecap="round"/>
   <path d="M1080 278 L1380 259 L1380 247 L1080 266 Z" fill="#aab2ba"/>
   <path d="M1086 281 L1374 263" stroke="#0b0c0e" stroke-width="5" stroke-dasharray="18 8"/>
   <!-- turbo ventilators -->
-  <use href="#turbo" transform="translate(1250 305) scale(1.05)"/>
-  <use href="#turbo" transform="translate(1390 296) scale(1.05)"/>
-  <use href="#turbo" transform="translate(1530 288) scale(1.05)"/>
-  <use href="#turbo" transform="translate(1660 279) scale(1.05)"/>
-  <use href="#turbo" transform="translate(1790 271) scale(1.05)"/>
+  <use href="#turbo" transform="translate(1010 334) scale(1.5)"/>
+  <use href="#turbo" transform="translate(1225 320) scale(1.5)"/>
+  <use href="#turbo" transform="translate(1440 307) scale(1.5)"/>
+  <use href="#turbo" transform="translate(1655 294) scale(1.5)"/>
+  <use href="#turbo" transform="translate(1870 280) scale(1.5)"/>
 </g>
 <rect width="1920" height="1080" fill="url(#glow)"/>
 <!-- smoke -->
