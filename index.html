@@ -6,7 +6,7 @@
 
 <!-- ============ SEO ============ -->
 <!-- REPLACE: every "[Your Company Name]" / "YourCompany" in this file with your real name (Find & Replace). -->
-<title>C4 Engineering Co | Industrial Gas Cutting Torches, Machines & Equipment</title>
+<title>C4 Engineering Co | Industrial Roofing Solutions</title>
 <meta name="description" content="C4 Engineering Co supplies precision gas cutting torches, cutting nozzles, portable & CNC gas cutting machines, turbo, ridge, louver and electric ventilators, and roof sheet installation. ISO certified quality, fast delivery.">
 <meta name="keywords" content="gas cutting torch, industrial gas cutting, iron cutting machine, steel cutting, cutting nozzle, CNC gas cutting machine, portable gas cutting machine, turbo ventilator, roof ventilator, ridge ventilator, shed louver vent, electric ventilator, industrial exhaust fan, roof sheet installation, roofing sheets">
 <meta name="robots" content="index, follow">
@@ -302,6 +302,20 @@ thead th{position:sticky;top:0;background:var(--bg-3);font-family:var(--font-hea
 tbody tr{transition:background .2s}
 tbody tr:hover{background:rgba(255,106,26,.06)}
 tbody td:first-child{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace;color:var(--flame-2)}
+/* Mobile: each table row becomes a stacked card (labels come from data-label on each td) */
+@media(max-width:640px){
+  .table-wrap{overflow:visible;border:0;background:none;border-radius:0}
+  .table-wrap table{display:flex;flex-direction:column;min-width:0}
+  .table-wrap thead{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .table-wrap tbody,.table-wrap tr,.table-wrap td{display:block;width:100%}
+  .table-wrap tr{border:1px solid var(--line);border-radius:10px;background:var(--bg-2);margin-bottom:12px;overflow:hidden}
+  .table-wrap tbody tr:hover{background:var(--bg-2)}
+  .table-wrap td{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:11px 16px;white-space:normal;text-align:right}
+  .table-wrap td::before{content:attr(data-label);flex:none;text-align:left;font-family:var(--font-head);font-weight:700;font-size:.85rem;letter-spacing:.1em;text-transform:uppercase;color:var(--steel)}
+  .table-wrap td:first-child{background:var(--bg-3);font-size:1rem}
+  .table-wrap tr td:last-child{border-bottom:0}
+  .table-wrap caption{order:2;border:0;padding:4px 2px 0}
+}
 .por{display:inline-block;padding:3px 10px;border-radius:999px;border:1px solid rgba(255,176,32,.4);color:var(--flame-2);font-size:.78rem;font-weight:500}
 
 /* =========================================================
@@ -666,10 +680,10 @@ tbody td:first-child{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace
             <caption>Specifications are indicative. Contact us for application-specific data.</caption>
             <thead><tr><th scope="col">Model</th><th scope="col">Gas Type</th><th scope="col">Cutting Thickness</th><th scope="col">Pressure</th><th scope="col">Price</th></tr></thead>
             <tbody>
-              <tr><td>YC-T80L</td><td>Oxy-LPG</td><td>8 – 60 mm</td><td>2 – 7 bar O₂</td><td><span class="por">On Request</span></td></tr>
-              <tr><td>YC-MT22</td><td>Oxy-Acetylene / LPG</td><td>8 – 60 mm</td><td>3 – 8 bar O₂</td><td><span class="por">On Request</span></td></tr>
-              <tr><td>YC-PM30</td><td>Oxy-Acetylene / LPG</td><td>8 – 60 mm</td><td>3 – 7 bar O₂</td><td><span class="por">On Request</span></td></tr>
-              <tr><td>YC-CNC-1530</td><td>Oxy-Fuel / Plasma</td><td>3 – 10 mm</td><td>4 – 10 bar O₂</td><td><span class="por">On Request</span></td></tr>
+              <tr><td data-label="Model">YC-T80L</td><td data-label="Gas Type">Oxy-LPG</td><td data-label="Cutting Thickness">8 – 60 mm</td><td data-label="Pressure">2 – 7 bar O₂</td><td data-label="Price"><span class="por">On Request</span></td></tr>
+              <tr><td data-label="Model">YC-MT22</td><td data-label="Gas Type">Oxy-Acetylene / LPG</td><td data-label="Cutting Thickness">8 – 60 mm</td><td data-label="Pressure">3 – 8 bar O₂</td><td data-label="Price"><span class="por">On Request</span></td></tr>
+              <tr><td data-label="Model">YC-PM30</td><td data-label="Gas Type">Oxy-Acetylene / LPG</td><td data-label="Cutting Thickness">8 – 60 mm</td><td data-label="Pressure">3 – 7 bar O₂</td><td data-label="Price"><span class="por">On Request</span></td></tr>
+              <tr><td data-label="Model">YC-CNC-1530</td><td data-label="Gas Type">Oxy-Fuel / Plasma</td><td data-label="Cutting Thickness">3 – 10 mm</td><td data-label="Pressure">4 – 10 bar O₂</td><td data-label="Price"><span class="por">On Request</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -680,9 +694,9 @@ tbody td:first-child{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace
             <caption>Sizes made to order. Contact us for site-specific recommendations.</caption>
             <thead><tr><th scope="col">Model</th><th scope="col">Product</th><th scope="col">Size</th><th scope="col">Material</th><th scope="col">Power</th><th scope="col">Price</th></tr></thead>
             <tbody>
-              <tr><td>YC-V-LV</td><td>Shed Louver Vent</td><td>Customized size</td><td>GI / PPGL</td><td>Natural</td><td><span class="por">On Request</span></td></tr>
-              <tr><td>YC-V-RG</td><td>Ridge Ventilator</td><td>Per running metre</td><td>GI / PPGL</td><td>Natural</td><td><span class="por">On Request</span></td></tr>
-              <tr><td>YC-V-EL</td><td>Electric Ventilator</td><td>12" – 18" sweep</td><td>MS body, Al blades</td><td>230 V / 415 V</td><td><span class="por">On Request</span></td></tr>
+              <tr><td data-label="Model">YC-V-LV</td><td data-label="Product">Shed Louver Vent</td><td data-label="Size">Customized size</td><td data-label="Material">GI / PPGL</td><td data-label="Power">Natural</td><td data-label="Price"><span class="por">On Request</span></td></tr>
+              <tr><td data-label="Model">YC-V-RG</td><td data-label="Product">Ridge Ventilator</td><td data-label="Size">Per running metre</td><td data-label="Material">GI / PPGL</td><td data-label="Power">Natural</td><td data-label="Price"><span class="por">On Request</span></td></tr>
+              <tr><td data-label="Model">YC-V-EL</td><td data-label="Product">Electric Ventilator</td><td data-label="Size">12" – 18" sweep</td><td data-label="Material">MS body, Al blades</td><td data-label="Power">230 V / 415 V</td><td data-label="Price"><span class="por">On Request</span></td></tr>
             </tbody>
           </table>
         </div>
@@ -693,8 +707,8 @@ tbody td:first-child{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace
             <caption>Wind-driven, no electricity required. Contact us for roof-area sizing.</caption>
             <thead><tr><th scope="col">Model</th><th scope="col">Throat Size</th><th scope="col">Material</th><th scope="col">Bearing</th><th scope="col">Power</th><th scope="col">Price</th></tr></thead>
             <tbody>
-              <tr><td>YC-V-TB21</td><td>21" (530 mm)</td><td>SS / Aluminium</td><td>Double ball bearing</td><td>Wind-driven</td><td><span class="por">On Request</span></td></tr>
-              <tr><td>YC-V-TB24</td><td>24" (600 mm)</td><td>SS / Aluminium</td><td>Double ball bearing</td><td>Wind-driven</td><td><span class="por">On Request</span></td></tr>
+              <tr><td data-label="Model">YC-V-TB21</td><td data-label="Throat Size">21" (530 mm)</td><td data-label="Material">SS / Aluminium</td><td data-label="Bearing">Double ball bearing</td><td data-label="Power">Wind-driven</td><td data-label="Price"><span class="por">On Request</span></td></tr>
+              <tr><td data-label="Model">YC-V-TB24</td><td data-label="Throat Size">24" (600 mm)</td><td data-label="Material">SS / Aluminium</td><td data-label="Bearing">Double ball bearing</td><td data-label="Power">Wind-driven</td><td data-label="Price"><span class="por">On Request</span></td></tr>
             </tbody>
           </table>
         </div>
