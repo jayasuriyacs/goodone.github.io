@@ -91,6 +91,18 @@
       ],
       "areaServed": [
         { "@type": "City", "name": "Coimbatore" },
+        { "@type": "City", "name": "Tiruppur" },
+        { "@type": "City", "name": "Erode" },
+        { "@type": "City", "name": "Salem" },
+        { "@type": "City", "name": "Namakkal" },
+        { "@type": "City", "name": "Karur" },
+        { "@type": "City", "name": "Pollachi" },
+        { "@type": "City", "name": "Mettupalayam" },
+        { "@type": "City", "name": "Palakkad" },
+        { "@type": "City", "name": "Thrissur" },
+        { "@type": "City", "name": "Kochi" },
+        { "@type": "City", "name": "Malappuram" },
+        { "@type": "City", "name": "Kozhikode" },
         { "@type": "State", "name": "Tamil Nadu" },
         { "@type": "State", "name": "Kerala" }
       ],
@@ -111,6 +123,68 @@
           { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "CNC Gas Cutting Machine", "description": "Gantry-type CNC oxy-fuel and plasma cutter for steel plates." } }
         ]
       }
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://c4group.co.in/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Do you do roof sheet installation in Coimbatore and Kerala?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We install metal, polycarbonate and FRP roofing sheets for factories, warehouses and sheds in Coimbatore, Tiruppur, Erode, Salem and across Tamil Nadu, and in Kerala including Palakkad, Thrissur, Kochi and Kozhikode."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the turbo ventilator price in Coimbatore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The price depends on the ventilator size, material and how many you need. Share your shed size and we will recommend the right number and size and send you a quote. Call or WhatsApp +91 96775 58464."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How many turbo ventilators does my shed need?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "It depends on the roof area, the shed height and how much heat is produced inside. Send us your roof dimensions and what the shed is used for, and we will work out the number and placement for you."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do turbo ventilators need electricity?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. Turbo ventilators spin using wind and rising hot air, so there is no power cost. Where a shed needs stronger, forced airflow, we also supply electric ventilators (industrial exhaust fans)."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Turbo, ridge or louver ventilator: which is right for my shed?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Turbo ventilators exhaust hot air at points on the roof. Ridge ventilators vent continuously along the roof ridge. Louver vents fit in the walls and let fresh air in. Many sheds work best with a combination, and we can suggest the right mix for yours."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Portable or CNC gas cutting machine: which should I buy?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A portable gas cutting machine runs on a track and makes straight, bevel and circle cuts, so it suits on-site work and smaller workshops. A CNC gas cutting machine is a gantry machine for oxy-fuel and plasma cutting of steel plates, ideal when you cut many parts or complex shapes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which areas do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We are based in Irugur, Coimbatore, and serve Coimbatore, Tiruppur, Erode, Salem, Namakkal, Karur, Pollachi and Mettupalayam in Tamil Nadu, and Palakkad, Thrissur, Kochi (Ernakulam), Malappuram and Kozhikode in Kerala."
+          }
+        }
+      ]
     }
   ]
 }
@@ -462,6 +536,24 @@ tbody td:first-child{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace
 /* =========================================================
    SCROLL REVEAL
    ========================================================= */
+/* FAQ + areas served */
+.faq-list{max-width:880px;display:grid;gap:12px}
+.faq{border:1px solid var(--line);border-radius:var(--radius);background:linear-gradient(180deg,var(--bg-3),var(--bg-2));transition:border-color .25s}
+.faq[open]{border-color:rgba(255,106,26,.45)}
+.faq summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 22px;min-height:44px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary h3{margin:0;font-size:1.25rem;line-height:1.3;transition:color .25s}
+.faq summary:hover h3{color:var(--flame-2)}
+.faq summary::after{content:"+";flex:none;font-family:var(--font-head);font-size:1.8rem;line-height:1;color:var(--flame);transition:transform .25s var(--ease)}
+.faq[open] summary::after{transform:rotate(45deg)}
+.faq p{margin:0;padding:0 22px 20px;color:var(--text-dim)}
+.areas{max-width:880px;margin-top:48px}
+.areas h3{font-size:1.4rem;margin:0 0 4px}
+.areas h3 + p{margin:0;color:var(--text-dim)}
+.area-group{margin-top:18px}
+.area-group h4{margin:0 0 10px;font-family:var(--font-head);font-weight:600;font-size:.95rem;letter-spacing:.16em;text-transform:uppercase;color:var(--flame-2)}
+.area-list{display:flex;flex-wrap:wrap;gap:8px;list-style:none;padding:0;margin:0}
+.area-list li{padding:6px 14px;border:1px solid var(--line);border-radius:999px;background:var(--bg-3);font-size:.9rem}
 .reveal{opacity:0;transform:translateY(28px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
 .reveal.in{opacity:1;transform:none}
 .reveal[data-delay="1"]{transition-delay:.08s}.reveal[data-delay="2"]{transition-delay:.16s}.reveal[data-delay="3"]{transition-delay:.24s}
@@ -801,6 +893,67 @@ tbody td:first-child{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace
 </section>
 
 <!-- =========================================================
+     FAQ + AREAS WE SERVE  (keep answers in sync with the FAQPage data in <head>)
+     ========================================================= -->
+<section class="section" id="faq" aria-labelledby="faq-title">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 id="faq-title">Frequently Asked <span class="text-flame">Questions</span></h2>
+      <p>Quick answers about roof sheet installation, roof ventilators and gas cutting machines in Coimbatore, Tamil Nadu and Kerala.</p>
+    </div>
+
+    <div class="faq-list reveal">
+      <details class="faq">
+        <summary><h3>Do you do roof sheet installation in Coimbatore and Kerala?</h3></summary>
+        <p>Yes. We install metal, polycarbonate and FRP roofing sheets for factories, warehouses and sheds in Coimbatore, Tiruppur, Erode, Salem and across Tamil Nadu, and in Kerala including Palakkad, Thrissur, Kochi and Kozhikode.</p>
+      </details>
+      <details class="faq">
+        <summary><h3>What is the turbo ventilator price in Coimbatore?</h3></summary>
+        <p>The price depends on the ventilator size, material and how many you need. Share your shed size and we will recommend the right number and size and send you a quote. Call or WhatsApp +91 96775 58464.</p>
+      </details>
+      <details class="faq">
+        <summary><h3>How many turbo ventilators does my shed need?</h3></summary>
+        <p>It depends on the roof area, the shed height and how much heat is produced inside. Send us your roof dimensions and what the shed is used for, and we will work out the number and placement for you.</p>
+      </details>
+      <details class="faq">
+        <summary><h3>Do turbo ventilators need electricity?</h3></summary>
+        <p>No. Turbo ventilators spin using wind and rising hot air, so there is no power cost. Where a shed needs stronger, forced airflow, we also supply electric ventilators (industrial exhaust fans).</p>
+      </details>
+      <details class="faq">
+        <summary><h3>Turbo, ridge or louver ventilator: which is right for my shed?</h3></summary>
+        <p>Turbo ventilators exhaust hot air at points on the roof. Ridge ventilators vent continuously along the roof ridge. Louver vents fit in the walls and let fresh air in. Many sheds work best with a combination, and we can suggest the right mix for yours.</p>
+      </details>
+      <details class="faq">
+        <summary><h3>Portable or CNC gas cutting machine: which should I buy?</h3></summary>
+        <p>A portable gas cutting machine runs on a track and makes straight, bevel and circle cuts, so it suits on-site work and smaller workshops. A CNC gas cutting machine is a gantry machine for oxy-fuel and plasma cutting of steel plates, ideal when you cut many parts or complex shapes.</p>
+      </details>
+      <details class="faq">
+        <summary><h3>Which areas do you serve?</h3></summary>
+        <p>We are based in Irugur, Coimbatore, and serve Coimbatore, Tiruppur, Erode, Salem, Namakkal, Karur, Pollachi and Mettupalayam in Tamil Nadu, and Palakkad, Thrissur, Kochi (Ernakulam), Malappuram and Kozhikode in Kerala.</p>
+      </details>
+    </div>
+
+    <div class="areas reveal">
+      <h3>Areas We Serve</h3>
+      <p>Roofing, roof ventilation and gas cutting machines for industries across Tamil Nadu and Kerala.</p>
+      <div class="area-group">
+        <h4>Tamil Nadu</h4>
+        <ul class="area-list">
+          <li>Coimbatore</li><li>Tiruppur</li><li>Erode</li><li>Salem</li><li>Namakkal</li><li>Karur</li><li>Pollachi</li><li>Mettupalayam</li>
+        </ul>
+      </div>
+      <div class="area-group">
+        <h4>Kerala</h4>
+        <ul class="area-list">
+          <li>Palakkad</li><li>Thrissur</li><li>Kochi (Ernakulam)</li><li>Malappuram</li><li>Kozhikode</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
      4. CONTACT
      ========================================================= -->
 <section class="section angle-top metal" id="contact" aria-labelledby="contact-title">
@@ -869,6 +1022,7 @@ tbody td:first-child{font-family:ui-monospace,"Cascadia Mono",Consolas,monospace
           <li><a href="#home">Home</a></li>
           <li><a href="#products">Products</a></li>
           <li><a href="#catalog">Catalog</a></li>
+          <li><a href="#faq">FAQ</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="catalog.pdf" target="_blank" rel="noopener">Download Catalog</a></li>
         </ul>
